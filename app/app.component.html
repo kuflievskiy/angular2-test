@@ -3,8 +3,18 @@
 <button (click)="onHideMe()">Hide me!</button>
 <list></list>
 
-<a routerLink="/admin">Admin Panel</a>
 
+
+<p>Navigation :</p>
+<ul>
+    <li>
+        <a routerLink="/">Home Page</a>
+    </li>
+    <li>
+       <a routerLink="/admin">Admin Panel</a>
+    </li>
+
+</ul>
 Check data-binding : <input type="text" name="title" value=""/>
 {{title | json}}
 

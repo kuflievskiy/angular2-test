@@ -17,6 +17,7 @@ var auto_grow_directive_1 = require("./directives/auto-grow.directive");
 var admin_1 = require("./admin/admin");
 var frontend_1 = require("./frontend/frontend");
 var app_routing_1 = require('./app.routing');
+var common_1 = require('@angular/common');
 // import {enableProdMode} from '@angular/core';
 // enableProdMode();
 var AppModule = (function () {
@@ -40,7 +41,8 @@ var AppModule = (function () {
             ],
             providers: [
                 list_service_1.ListService,
-                app_routing_1.appRoutingProviders
+                app_routing_1.appRoutingProviders,
+                { provide: common_1.LocationStrategy, useClass: common_1.HashLocationStrategy }
             ]
         }), 
         __metadata('design:paramtypes', [])

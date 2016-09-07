@@ -11,6 +11,7 @@ import {Frontend} from "./frontend/frontend";
 import { routing, appRoutingProviders } from './app.routing';
 
 
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 // import {enableProdMode} from '@angular/core';
 // enableProdMode();
@@ -36,6 +37,8 @@ import { routing, appRoutingProviders } from './app.routing';
     providers: [
         ListService
         , appRoutingProviders
+        ,  {provide: LocationStrategy, useClass: HashLocationStrategy}
+
     ]
 
 })

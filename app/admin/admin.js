@@ -9,15 +9,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var router_1 = require("@angular/router");
 var Admin = (function () {
-    function Admin() {
+    function Admin(router) {
+        this._router = router;
     }
+    Admin.prototype.backToHome = function () {
+        this._router.navigate(['/']);
+    };
     Admin = __decorate([
         core_1.Component({
             selector: 'admin',
-            template: 'Welcome to the admin page!'
+            template: 'Welcome to the admin page!<button (click)="backToHome()">go back</button>'
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [router_1.Router])
     ], Admin);
     return Admin;
 }());
