@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import {ListComponent} from "./components/list.component";
 
-import {AppModel} from './app.model';
-
 @Component({
   selector: 'my-app',
   templateUrl: 'app/app.component.html',
@@ -13,7 +11,6 @@ export class AppComponent {
     title:string = 'Tour of Heroes';
     hero:string = 'Windstorm';
     clickMessage = '';
-    model:AppModel;
     constructor(){
         console.log('I am a constructor method!');
     }
