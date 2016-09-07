@@ -9,28 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
-        this.title = 'Tour of Heroes';
-        this.hero = 'Windstorm';
-        this.clickMessage = '';
-        console.log('I am a constructor method!');
+var list_service_1 = require("../services/list.service");
+var ListComponent = (function () {
+    function ListComponent(listService) {
+        console.log('LIST COMPONENT : I am a constructor method!');
+        this.items = listService.getItems();
+        console.log(this.items);
     }
-    AppComponent.prototype.onClickMe = function () {
-        this.clickMessage = 'You are my hero!';
-    };
-    AppComponent.prototype.onHideMe = function () {
-        this.clickMessage = '';
-    };
-    AppComponent = __decorate([
+    ListComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            templateUrl: 'app/app.component.html',
-            styleUrls: ['app/app.component.css']
+            selector: 'list',
+            templateUrl: 'app/components/list.component.html'
         }), 
-        __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+        __metadata('design:paramtypes', [list_service_1.ListService])
+    ], ListComponent);
+    return ListComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.ListComponent = ListComponent;
+//# sourceMappingURL=list.component.js.map

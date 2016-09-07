@@ -9,28 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
-        this.title = 'Tour of Heroes';
-        this.hero = 'Windstorm';
-        this.clickMessage = '';
-        console.log('I am a constructor method!');
+var ListService = (function () {
+    function ListService() {
     }
-    AppComponent.prototype.onClickMe = function () {
-        this.clickMessage = 'You are my hero!';
+    ListService.prototype.getItems = function () {
+        return ['Item 1', 'Item 2', 'Item3'];
     };
-    AppComponent.prototype.onHideMe = function () {
-        this.clickMessage = '';
-    };
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: 'my-app',
-            templateUrl: 'app/app.component.html',
-            styleUrls: ['app/app.component.css']
-        }), 
+    ;
+    ListService = __decorate([
+        core_1.Injectable(), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], ListService);
+    return ListService;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.ListService = ListService;
+//# sourceMappingURL=list.service.js.map
