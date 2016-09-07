@@ -14,7 +14,9 @@ var app_component_1 = require('./app.component');
 var list_component_1 = require('./components/list.component');
 var list_service_1 = require("./services/list.service");
 var auto_grow_directive_1 = require("./directives/auto-grow.directive");
-//import {routing, appRoutingProviders} from "./app.routing";
+var admin_1 = require("./admin/admin");
+var frontend_1 = require("./frontend/frontend");
+var app_routing_1 = require('./app.routing');
 // import {enableProdMode} from '@angular/core';
 // enableProdMode();
 var AppModule = (function () {
@@ -23,10 +25,13 @@ var AppModule = (function () {
     AppModule = __decorate([
         core_1.NgModule({
             imports: [
-                platform_browser_1.BrowserModule
+                platform_browser_1.BrowserModule,
+                app_routing_1.routing
             ],
             declarations: [
                 app_component_1.AppComponent,
+                admin_1.Admin,
+                frontend_1.Frontend,
                 list_component_1.ListComponent,
                 auto_grow_directive_1.AutoGrowDirective
             ],
@@ -34,7 +39,8 @@ var AppModule = (function () {
                 app_component_1.AppComponent
             ],
             providers: [
-                list_service_1.ListService
+                list_service_1.ListService,
+                app_routing_1.appRoutingProviders
             ]
         }), 
         __metadata('design:paramtypes', [])

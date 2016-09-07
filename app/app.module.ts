@@ -5,7 +5,12 @@ import {ListComponent} from './components/list.component';
 import {ListService} from "./services/list.service";
 import {AutoGrowDirective} from "./directives/auto-grow.directive";
 
-//import {routing, appRoutingProviders} from "./app.routing";
+import {Admin} from "./admin/admin";
+import {Frontend} from "./frontend/frontend";
+
+import { routing, appRoutingProviders } from './app.routing';
+
+
 
 // import {enableProdMode} from '@angular/core';
 // enableProdMode();
@@ -13,11 +18,15 @@ import {AutoGrowDirective} from "./directives/auto-grow.directive";
 @NgModule({
     imports: [
         BrowserModule
-//        , routing
+        , routing
     ],
     declarations: [
         AppComponent
+        , Admin
+        , Frontend
+
         , ListComponent
+
         , AutoGrowDirective
 
     ],
@@ -26,7 +35,7 @@ import {AutoGrowDirective} from "./directives/auto-grow.directive";
     ],
     providers: [
         ListService
-//        , appRoutingProviders
+        , appRoutingProviders
     ]
 
 })

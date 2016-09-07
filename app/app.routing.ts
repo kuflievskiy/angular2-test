@@ -1,13 +1,14 @@
-import {ModuleWithProviders} from '@angular/core';
-import {Routes, RouterModule} from '@angular/router';
+import { Routes, RouterModule }   from '@angular/router';
+import {ModuleWithProviders} from "@angular/core";
 
-import {ListComponent} from './components/list.component';
+import { Admin } from './admin/admin';
+import {Frontend} from "./frontend/frontend";
+
+
 
 const appRoutes: Routes = [
-    {
-        path: 'lists',
-        component: ListComponent
-    }
+    { path: '', component: Frontend },
+    { path: 'admin', component: Admin }
 ];
 
 export const appRoutingProviders: any[] = [

@@ -3,7 +3,11 @@
 <button (click)="onHideMe()">Hide me!</button>
 <list></list>
 
-<a routerLink="lists" routerLinkActive="active">lists</a>
+<a routerLink="/admin">Admin Panel</a>
 
 Check data-binding : <input type="text" name="title" value=""/>
 {{title | json}}
+
+
+<!-- Routed views go here -->
+<router-outlet></router-outlet>
