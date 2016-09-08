@@ -11,14 +11,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var app_component_1 = require('./app.component');
-var list_component_1 = require('./components/list.component');
 var list_service_1 = require("./services/list.service");
 var auto_grow_directive_1 = require("./directives/auto-grow.directive");
 var admin_1 = require("./admin/admin");
 var frontend_1 = require("./frontend/frontend");
 var app_routing_1 = require('./app.routing');
 var common_1 = require('@angular/common');
-// import {enableProdMode} from '@angular/core';
 // enableProdMode();
 var AppModule = (function () {
     function AppModule() {
@@ -33,7 +31,6 @@ var AppModule = (function () {
                 app_component_1.AppComponent,
                 admin_1.Admin,
                 frontend_1.Frontend,
-                list_component_1.ListComponent,
                 auto_grow_directive_1.AutoGrowDirective
             ],
             bootstrap: [

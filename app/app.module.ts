@@ -1,7 +1,6 @@
-import {NgModule}      from '@angular/core';
+import {NgModule,enableProdMode}      from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {AppComponent}   from './app.component';
-import {ListComponent} from './components/list.component';
 import {ListService} from "./services/list.service";
 import {AutoGrowDirective} from "./directives/auto-grow.directive";
 
@@ -13,7 +12,6 @@ import { routing, appRoutingProviders } from './app.routing';
 
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
-// import {enableProdMode} from '@angular/core';
 // enableProdMode();
 
 @NgModule({
@@ -26,10 +24,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
         , Admin
         , Frontend
 
-        , ListComponent
-
         , AutoGrowDirective
-
     ],
     bootstrap: [
         AppComponent
@@ -38,7 +33,6 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
         ListService
         , appRoutingProviders
         ,  {provide: LocationStrategy, useClass: HashLocationStrategy}
-
     ]
 
 })
