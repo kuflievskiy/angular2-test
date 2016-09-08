@@ -9,15 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var content_service_1 = require("./content.service");
 var Content = (function () {
-    function Content() {
+    function Content(contentService) {
+        this.items = contentService.getItems();
     }
     Content = __decorate([
         core_1.Component({
             selector: 'content',
             templateUrl: 'app/frontend/content/content.html'
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [content_service_1.ContentService])
     ], Content);
     return Content;
 }());

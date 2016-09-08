@@ -5,5 +5,6 @@ import {Component} from '@angular/core';
     templateUrl:'app/frontend/header/header.html'
 })
 export class Header {
-    constructor() {}
+    constructor() {
+    }
 }

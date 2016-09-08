@@ -11,16 +11,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var app_component_1 = require('./app.component');
-var list_service_1 = require("./services/list.service");
-var auto_grow_directive_1 = require("./directives/auto-grow.directive");
+var auto_grow_directive_1 = require("./frontend/header/directives/auto-grow.directive");
 var admin_1 = require("./admin/admin");
 var frontend_1 = require("./frontend/frontend");
 var header_1 = require('./frontend/header/header');
 var footer_1 = require('./frontend/footer/footer');
 var content_1 = require('./frontend/content/content');
+var content_service_1 = require('./frontend/content/content.service');
 var app_routing_1 = require('./app.routing');
 var common_1 = require('@angular/common');
 // enableProdMode();
+var forms_1 = require("@angular/forms");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -28,7 +29,8 @@ var AppModule = (function () {
         core_1.NgModule({
             imports: [
                 platform_browser_1.BrowserModule,
-                app_routing_1.routing
+                app_routing_1.routing,
+                forms_1.ReactiveFormsModule
             ],
             declarations: [
                 app_component_1.AppComponent,
@@ -43,7 +45,7 @@ var AppModule = (function () {
                 app_component_1.AppComponent
             ],
             providers: [
-                list_service_1.ListService,
+                content_service_1.ContentService,
                 app_routing_1.appRoutingProviders,
                 { provide: common_1.LocationStrategy, useClass: common_1.HashLocationStrategy }
             ]
