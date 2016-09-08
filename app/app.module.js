@@ -15,6 +15,9 @@ var list_service_1 = require("./services/list.service");
 var auto_grow_directive_1 = require("./directives/auto-grow.directive");
 var admin_1 = require("./admin/admin");
 var frontend_1 = require("./frontend/frontend");
+var header_1 = require('./frontend/header/header');
+var footer_1 = require('./frontend/footer/footer');
+var content_1 = require('./frontend/content/content');
 var app_routing_1 = require('./app.routing');
 var common_1 = require('@angular/common');
 // enableProdMode();
@@ -31,6 +34,9 @@ var AppModule = (function () {
                 app_component_1.AppComponent,
                 admin_1.Admin,
                 frontend_1.Frontend,
+                header_1.Header,
+                footer_1.Footer,
+                content_1.Content,
                 auto_grow_directive_1.AutoGrowDirective
             ],
             bootstrap: [

@@ -15,7 +15,7 @@ var Frontend = (function () {
     Frontend = __decorate([
         core_1.Component({
             selector: 'frontend',
-            template: 'Welcome to the frontend page!'
+            template: '<header></header><content></content><footer></footer>'
         }), 
         __metadata('design:paramtypes', [])
     ], Frontend);

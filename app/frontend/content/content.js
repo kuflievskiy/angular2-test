@@ -9,19 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
-        this.hero = 'Windstorm';
-        console.log('I am a constructor method!');
+var Content = (function () {
+    function Content() {
     }
-    AppComponent = __decorate([
+    Content = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            template: '<!-- Routed views go here --><router-outlet></router-outlet>'
+            selector: 'content',
+            templateUrl: 'app/frontend/content/content.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], Content);
+    return Content;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.Content = Content;
+//# sourceMappingURL=content.js.map

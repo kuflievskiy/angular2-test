@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 
 @Component({
     selector: 'frontend',
-    template: 'Welcome to the frontend page!'
+    template: '<header></header><content></content><footer></footer>'
 })
 export class Frontend {
     constructor() {

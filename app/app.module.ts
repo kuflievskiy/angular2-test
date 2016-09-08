@@ -7,6 +7,11 @@ import {AutoGrowDirective} from "./directives/auto-grow.directive";
 import {Admin} from "./admin/admin";
 import {Frontend} from "./frontend/frontend";
 
+
+import {Header} from './frontend/header/header';
+import {Footer} from './frontend/footer/footer';
+import {Content} from './frontend/content/content';
+
 import { routing, appRoutingProviders } from './app.routing';
 
 
@@ -23,6 +28,9 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
         AppComponent
         , Admin
         , Frontend
+        , Header
+        , Footer
+        , Content
 
         , AutoGrowDirective
     ],

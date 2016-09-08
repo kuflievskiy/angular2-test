@@ -9,19 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
-        this.hero = 'Windstorm';
-        console.log('I am a constructor method!');
+var Header = (function () {
+    function Header() {
     }
-    AppComponent = __decorate([
+    Header = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            template: '<!-- Routed views go here --><router-outlet></router-outlet>'
+            selector: 'header',
+            templateUrl: 'app/frontend/header/header.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], Header);
+    return Header;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.Header = Header;
+//# sourceMappingURL=header.js.map
