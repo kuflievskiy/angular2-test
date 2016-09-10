@@ -20,8 +20,9 @@ var content_1 = require('./frontend/content/content');
 var content_service_1 = require('./frontend/content/content.service');
 var app_routing_1 = require('./app.routing');
 var common_1 = require('@angular/common');
-// enableProdMode();
 var forms_1 = require("@angular/forms");
+var favorite_1 = require("./frontend/content/favorite");
+// enableProdMode();
 var AppModule = (function () {
     function AppModule() {
     }
@@ -30,7 +31,7 @@ var AppModule = (function () {
             imports: [
                 platform_browser_1.BrowserModule,
                 app_routing_1.routing,
-                forms_1.ReactiveFormsModule
+                forms_1.FormsModule
             ],
             declarations: [
                 app_component_1.AppComponent,
@@ -39,6 +40,7 @@ var AppModule = (function () {
                 header_1.Header,
                 footer_1.Footer,
                 content_1.Content,
+                favorite_1.Favorite,
                 auto_grow_directive_1.AutoGrowDirective
             ],
             bootstrap: [
