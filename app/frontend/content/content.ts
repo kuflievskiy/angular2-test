@@ -1,13 +1,30 @@
 import {Component} from '@angular/core';
 import {ContentService} from "./content.service";
-import {Favorite} from "./favorite";
+
 @Component({
     selector: 'content',
-    templateUrl:'app/frontend/content/content.html'
+    template : '' +
+    '<div class="album text-muted">' +
+        '<div class="container">' +
+            '<div class="row">' +
+                '<div *ngFor="let item of items" class="card">' +
+                    '<img width="355px" data-src="{{item.imageUrl}}" alt="{{item.title}}">' +
+                    '<p class="card-text">{{item.description}}</p>' +
+                    '<favorite [is-favorite]="item.isFavorite" (change)="onFavoriteChange($event,item.id)"></favorite>' +
+                    '<span class="glyphicons glyphicons-camera"></span>' +
+                '</div>' +
+            '</div>' +
+        '</div>' +
+    '</div>'
 })
 export class Content {
     private items:any;
     constructor(contentService:ContentService) {
         this.items = contentService.getItems();
+    }
+
+    onFavoriteChange($event,elementID){
+        console.log('onFavoriteChange for elementID : ' + elementID );
+        console.log($event);
     }
 }

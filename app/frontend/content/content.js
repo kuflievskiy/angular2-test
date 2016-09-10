@@ -14,10 +14,26 @@ var Content = (function () {
     function Content(contentService) {
         this.items = contentService.getItems();
     }
+    Content.prototype.onFavoriteChange = function ($event, elementID) {
+        console.log('onFavoriteChange for elementID : ' + elementID);
+        console.log($event);
+    };
     Content = __decorate([
         core_1.Component({
             selector: 'content',
-            templateUrl: 'app/frontend/content/content.html'
+            template: '' +
+                '<div class="album text-muted">' +
+                '<div class="container">' +
+                '<div class="row">' +
+                '<div *ngFor="let item of items" class="card">' +
+                '<img width="355px" data-src="{{item.imageUrl}}" alt="{{item.title}}">' +
+                '<p class="card-text">{{item.description}}</p>' +
+                '<favorite [is-favorite]="item.isFavorite" (change)="onFavoriteChange($event,item.id)"></favorite>' +
+                '<span class="glyphicons glyphicons-camera"></span>' +
+                '</div>' +
+                '</div>' +
+                '</div>' +
+                '</div>'
         }), 
         __metadata('design:paramtypes', [content_service_1.ContentService])
     ], Content);

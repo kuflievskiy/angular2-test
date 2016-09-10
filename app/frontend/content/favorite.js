@@ -11,15 +11,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var Favorite = (function () {
     function Favorite(elementRef) {
-        this.isActiveStar = false;
+        this.isFavorite = false;
+        this.change = new core_1.EventEmitter();
         this.elementRef = elementRef;
     }
     Favorite.prototype.onClick = function ($event) {
-        this.isActiveStar = ((true == this.isActiveStar) ? false : true);
+        this.isFavorite = ((true == this.isFavorite) ? false : true);
         this.renderStar($event.target);
+        this.change.emit({ newValue: this.isFavorite });
     };
     Favorite.prototype.renderStar = function (myElement) {
-        if (this.isActiveStar) {
+        if (this.isFavorite) {
             myElement.innerHTML = '&#x2605;'; // BLACK STAR
         }
         else {
@@ -33,12 +35,22 @@ var Favorite = (function () {
         // two child components <map-window> and <map-controls>
         this.renderStar(this.elementRef.nativeElement.children[0]);
     };
+    __decorate([
+        core_1.Input('is-favorite'), 
+        __metadata('design:type', Boolean)
+    ], Favorite.prototype, "isFavorite", void 0);
+    __decorate([
+        core_1.Output('change'), 
+        __metadata('design:type', Object)
+    ], Favorite.prototype, "change", void 0);
     Favorite = __decorate([
         core_1.Component({
             selector: 'favorite',
-            template: '<span class="glyphicons" (click)="onClick($event)" [class.glyphicon-star-empty] = "!isActiveStar" [class.glyphicon-star] = "isActiveStar">123</span>',
+            template: '<span class="glyphicons" (click)="onClick($event)" [class.glyphicon-star-empty] = "!isFavorite" [class.glyphicon-star] = "isFavorite">123</span>',
             styles: [
-                '.glyphicon-star-empty, .glyphicon-star{position: absolute;top: 10px;right: 20px;color: lime; font-size:25px;}.glyphicon-star-empty:hover, .glyphicon-star:hover{cursor: hand;}']
+                '.glyphicon-star-empty, .glyphicon-star{position: absolute;top: 10px;right: 20px;color: lime; font-size:25px;}' +
+                    '.glyphicon-star-empty:hover, .glyphicon-star:hover{cursor: hand;}'
+            ]
         }), 
         __metadata('design:paramtypes', [core_1.ElementRef])
     ], Favorite);
