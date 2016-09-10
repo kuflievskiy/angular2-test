@@ -9,7 +9,7 @@ import {Frontend} from "./frontend/frontend";
 
 
 import {Header} from './frontend/header/header';
-import {Footer} from './frontend/footer/footer';
+import {Footer} from "./frontend/footer";
 import {Content} from './frontend/content/content';
 
 
@@ -21,6 +21,7 @@ import { routing, appRoutingProviders } from './app.routing';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import {FormsModule} from "@angular/forms";
 import {Favorite} from "./frontend/content/favorite";
+
 
 // enableProdMode();
 
@@ -37,6 +38,7 @@ import {Favorite} from "./frontend/content/favorite";
         , Frontend
         , Header
         , Footer
+
         , Content
         , Favorite
 
