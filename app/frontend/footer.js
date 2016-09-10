@@ -15,13 +15,7 @@ var Footer = (function () {
     Footer = __decorate([
         core_1.Component({
             selector: 'footer',
-            template: '<div class="text-muted">' +
-                '<div class="container">' +
-                '<p class="pull-xs-right"><a href="#">Back to top</a></p>' +
-                '<p>Album example is Bootstrap, but please download and customize it for yourself!</p>' +
-                '<p>New to Bootstrap?<a routerLink="/">Home Page</a> or read our getting started guide.</p>' +
-                '</div>' +
-                '</div>'
+            template: "\n        <div class=\"text-muted\">\n            <div class=\"container\">\n                <p class=\"pull-xs-right\">\n                <a href=\"#\">Back to top</a>\n                </p>\n                <p>Album example is Bootstrap, but please download and customize it for yourself!</p>\n                <p>New to Bootstrap?<a routerLink=\"/\">Home Page</a> or read our getting started guide.</p>\n            </div>\n        </div>"
         }), 
         __metadata('design:paramtypes', [])
     ], Footer);
