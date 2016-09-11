@@ -11,7 +11,6 @@ import {Component, ElementRef, OnInit, Input, Output, EventEmitter} from '@angul
             cursor: hand;
         }`
     ]
-
 })
 export class Favorite implements OnInit{
     @Input('is-favorite') private isFavorite: boolean = false;
