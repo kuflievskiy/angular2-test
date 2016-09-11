@@ -10,13 +10,21 @@ import {ContentService} from "./content.service";
                 '<div *ngFor="let item of items" class="card">' +
                     '<img width="355px" data-src="{{item.imageUrl}}" alt="{{item.title}}">' +
                     '<p class="card-text">{{item.description}}</p>' +
-                    '<favorite [is-favorite]="item.isFavorite" (change)="onFavoriteChange($event,item.id)"></favorite>' +
-                    '&nbsp;' +
-                    '<like [number-of-likes]="item.numberOfLikes" [is-liked]="item.isLiked" (change)="onLikeChange($event,item.id)"></like>' +
+                    '<div class="card-action-buttons">' +
+                    '<p>Mark as favorite: <favorite [is-favorite]="item.isFavorite" (change)="onFavoriteChange($event,item.id)"></favorite></p>' +
+                    '<p>Like: <like [number-of-likes]="item.numberOfLikes" [is-liked]="item.isLiked" (change)="onLikeChange($event,item.id)"></like></p>' +
+                    '</div>' +
                 '</div>' +
             '</div>' +
         '</div>' +
-    '</div>'
+    '</div>',
+    styles:[
+        `
+            .card-action-buttons p{
+                line-height: 0em;
+            }
+        `
+    ]
 })
 export class Content {
     private items:any;

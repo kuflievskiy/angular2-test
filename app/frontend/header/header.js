@@ -15,7 +15,10 @@ var Header = (function () {
     Header = __decorate([
         core_1.Component({
             selector: 'header',
-            templateUrl: 'app/frontend/header/header.html'
+            templateUrl: 'app/frontend/header/header.html',
+            styles: [
+                "\n        .navbar-toggler{color:#ffffe0}\n        "
+            ]
         }), 
         __metadata('design:paramtypes', [])
     ], Header);
