@@ -19,7 +19,6 @@ export class Like implements OnInit {
     @Input('number-of-likes') private numberOfLikes: number;
     @Output('change') private change = new EventEmitter();
 
-    elementRef:ElementRef;
     constructor(private elementRef:ElementRef) {
     }
 
