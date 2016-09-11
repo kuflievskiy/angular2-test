@@ -12,39 +12,19 @@ var core_1 = require('@angular/core');
 var Vote = (function () {
     function Vote() {
         this.vote = new core_1.EventEmitter();
-        this.isVoteUpArrowActive = false;
-        this.isVoteDownArrowActive = false;
     }
     Vote.prototype.onClick = function ($event, direction) {
-        var isStateChanged = false;
         if ('up' == direction) {
             if (this.myVote <= 0) {
                 this.myVote = 1;
-                isStateChanged = true;
-                this.isVoteUpArrowActive = true;
-                this.isVoteDownArrowActive = false;
             }
         }
         else if ('down' == direction) {
             if (this.myVote >= 0) {
                 this.myVote = -1;
-                isStateChanged = true;
-                this.isVoteUpArrowActive = false;
-                this.isVoteDownArrowActive = true;
             }
         }
-        if (isStateChanged) {
-            this.voteCount += this.myVote;
-        }
         this.vote.emit({ 'myVote': this.myVote });
-    };
-    Vote.prototype.ngOnInit = function () {
-        if (this.myVote > 0) {
-            this.isVoteUpArrowActive = true;
-        }
-        else if (this.myVote < 0) {
-            this.isVoteDownArrowActive = true;
-        }
     };
     __decorate([
         core_1.Input('vote-count'), 
@@ -61,7 +41,7 @@ var Vote = (function () {
     Vote = __decorate([
         core_1.Component({
             selector: 'vote',
-            template: "\n        <span class=\"vote-up\" [class.active]=\"isVoteUpArrowActive\" (click)=\"onClick($event,'up')\">\u2B9D</span>\n        <span class=\"votes-count\">{{voteCount}}</span>\n        <span class=\"vote-down\" [class.active]=\"isVoteDownArrowActive\" (click)=\"onClick($event,'down')\">\u2B9F</span>\n        ",
+            template: "\n        <span class=\"vote-up\" [class.active]=\"myVote == 1\" (click)=\"onClick($event,'up')\">\u2B9D</span>\n        <span class=\"votes-count\">{{voteCount+myVote}}</span>\n        <span class=\"vote-down\" [class.active]=\"myVote == -1\" (click)=\"onClick($event,'down')\">\u2B9F</span>\n        ",
             styles: [
                 "\n            .vote-up,.vote-down{\n                cursor:pointer;\n            }\n            .vote-up.active,.vote-down.active{\n                color:#000;\n            }\n        "
             ]
