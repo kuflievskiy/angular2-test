@@ -13,6 +13,7 @@ import {ContentService} from "./content.service";
                     '<div class="card-action-buttons">' +
                     '<p>Mark as favorite: <favorite [is-favorite]="item.isFavorite" (change)="onFavoriteChange($event,item.id)"></favorite></p>' +
                     '<p>Like: <like [number-of-likes]="item.numberOfLikes" [is-liked]="item.isLiked" (change)="onLikeChange($event,item.id)"></like></p>' +
+                    '<p>Vote : <vote [vote-count]="item.voteCount" [my-vote]="item.myVote" (vote)="onVoteChange($event,item.id)"></vote></p>' +
                     '</div>' +
                 '</div>' +
             '</div>' +
@@ -38,6 +39,10 @@ export class Content {
     }
     onLikeChange($event, elementID){
         console.log('onLikeChange for elementID : ' + elementID );
+        console.log($event);
+    }
+    onVoteChange($event, elementID){
+        console.log('onVoteChange for elementID : ' + elementID );
         console.log($event);
     }
 }

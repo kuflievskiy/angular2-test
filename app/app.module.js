@@ -19,6 +19,7 @@ var footer_1 = require("./frontend/footer");
 var content_1 = require('./frontend/content/content');
 var favorite_1 = require("./frontend/content/favorite");
 var like_1 = require("./frontend/content/like");
+var vote_1 = require("./frontend/content/vote");
 var content_service_1 = require('./frontend/content/content.service');
 var app_routing_1 = require('./app.routing');
 var common_1 = require('@angular/common');
@@ -43,6 +44,7 @@ var AppModule = (function () {
                 content_1.Content,
                 favorite_1.Favorite,
                 like_1.Like,
+                vote_1.Vote,
                 auto_grow_directive_1.AutoGrowDirective
             ],
             bootstrap: [

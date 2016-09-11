@@ -21,7 +21,9 @@ var ContentService = (function () {
                 "description": "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
                 "isFavorite": true,
                 "isLiked": false,
-                "numberOfLikes": 1
+                "numberOfLikes": 1,
+                "voteCount": 10,
+                "myVote": 0
             },
             {
                 "id": 2,
@@ -30,7 +32,9 @@ var ContentService = (function () {
                 "description": "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
                 "isFavorite": true,
                 "isLiked": false,
-                "numberOfLikes": 2
+                "numberOfLikes": 2,
+                "voteCount": 10,
+                "myVote": 0
             },
             {
                 "id": 1,
@@ -39,7 +43,9 @@ var ContentService = (function () {
                 "description": "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
                 "isFavorite": true,
                 "isLiked": false,
-                "numberOfLikes": 3
+                "numberOfLikes": 3,
+                "voteCount": 10,
+                "myVote": 0
             },
             {
                 "id": 1,
@@ -48,7 +54,9 @@ var ContentService = (function () {
                 "description": "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
                 "isFavorite": true,
                 "isLiked": false,
-                "numberOfLikes": 10
+                "numberOfLikes": 10,
+                "voteCount": 10,
+                "myVote": 0
             },
             {
                 "id": 1,
@@ -57,7 +65,9 @@ var ContentService = (function () {
                 "description": "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
                 "isFavorite": true,
                 "isLiked": false,
-                "numberOfLikes": 10
+                "numberOfLikes": 10,
+                "voteCount": 10,
+                "myVote": 0
             },
             {
                 "id": 1,
@@ -66,7 +76,9 @@ var ContentService = (function () {
                 "description": "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
                 "isFavorite": false,
                 "isLiked": false,
-                "numberOfLikes": 10
+                "numberOfLikes": 10,
+                "voteCount": 10,
+                "myVote": 0
             },
             {
                 "id": 1,
@@ -75,7 +87,9 @@ var ContentService = (function () {
                 "description": "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
                 "isFavorite": true,
                 "isLiked": false,
-                "numberOfLikes": 10
+                "numberOfLikes": 10,
+                "voteCount": 10,
+                "myVote": 0
             },
             {
                 "id": 1,
@@ -84,7 +98,9 @@ var ContentService = (function () {
                 "description": "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
                 "isFavorite": false,
                 "isLiked": false,
-                "numberOfLikes": 10
+                "numberOfLikes": 10,
+                "voteCount": 10,
+                "myVote": 0
             },
             {
                 "id": 1,
@@ -93,7 +109,9 @@ var ContentService = (function () {
                 "description": "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
                 "isFavorite": false,
                 "isLiked": false,
-                "numberOfLikes": 10
+                "numberOfLikes": 10,
+                "voteCount": 10,
+                "myVote": 0
             },
             {
                 "id": 1,
@@ -102,7 +120,9 @@ var ContentService = (function () {
                 "description": "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
                 "isFavorite": false,
                 "isLiked": false,
-                "numberOfLikes": 10
+                "numberOfLikes": 10,
+                "voteCount": 10,
+                "myVote": 0
             },
             {
                 "id": 1,
@@ -111,7 +131,9 @@ var ContentService = (function () {
                 "description": "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
                 "isFavorite": false,
                 "isLiked": false,
-                "numberOfLikes": 10
+                "numberOfLikes": 10,
+                "voteCount": 10,
+                "myVote": 0
             },
             {
                 "id": 1,
@@ -120,7 +142,9 @@ var ContentService = (function () {
                 "description": "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
                 "isFavorite": false,
                 "isLiked": false,
-                "numberOfLikes": 10
+                "numberOfLikes": 10,
+                "voteCount": 10,
+                "myVote": 0
             },
             {
                 "id": 1,
@@ -129,7 +153,9 @@ var ContentService = (function () {
                 "description": "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
                 "isFavorite": false,
                 "isLiked": false,
-                "numberOfLikes": 10
+                "numberOfLikes": 10,
+                "voteCount": 10,
+                "myVote": 0
             },
             {
                 "id": 1,
@@ -138,7 +164,9 @@ var ContentService = (function () {
                 "description": "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
                 "isFavorite": false,
                 "isLiked": false,
-                "numberOfLikes": 10
+                "numberOfLikes": 10,
+                "voteCount": 10,
+                "myVote": 0
             },
             {
                 "id": 1,
@@ -147,7 +175,9 @@ var ContentService = (function () {
                 "description": "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
                 "isFavorite": false,
                 "isLiked": false,
-                "numberOfLikes": 10
+                "numberOfLikes": 10,
+                "voteCount": 10,
+                "myVote": 0
             },
             {
                 "id": 1,
@@ -156,7 +186,9 @@ var ContentService = (function () {
                 "description": "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
                 "isFavorite": false,
                 "isLiked": false,
-                "numberOfLikes": 10
+                "numberOfLikes": 10,
+                "voteCount": 10,
+                "myVote": 0
             },
             {
                 "id": 1,
@@ -165,7 +197,9 @@ var ContentService = (function () {
                 "description": "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
                 "isFavorite": false,
                 "isLiked": false,
-                "numberOfLikes": 10
+                "numberOfLikes": 10,
+                "voteCount": 10,
+                "myVote": 0
             },
             {
                 "id": 1,
@@ -174,7 +208,9 @@ var ContentService = (function () {
                 "description": "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
                 "isFavorite": false,
                 "isLiked": false,
-                "numberOfLikes": 10
+                "numberOfLikes": 10,
+                "voteCount": 10,
+                "myVote": 0
             },
             {
                 "id": 1,
@@ -183,7 +219,9 @@ var ContentService = (function () {
                 "description": "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
                 "isFavorite": false,
                 "isLiked": false,
-                "numberOfLikes": 10
+                "numberOfLikes": 10,
+                "voteCount": 10,
+                "myVote": 0
             },
             {
                 "id": 1,
@@ -192,7 +230,9 @@ var ContentService = (function () {
                 "description": "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
                 "isFavorite": false,
                 "isLiked": false,
-                "numberOfLikes": 10
+                "numberOfLikes": 10,
+                "voteCount": 10,
+                "myVote": 0
             },
             {
                 "id": 1,
@@ -201,7 +241,9 @@ var ContentService = (function () {
                 "description": "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
                 "isFavorite": false,
                 "isLiked": false,
-                "numberOfLikes": 10
+                "numberOfLikes": 10,
+                "voteCount": 10,
+                "myVote": 0
             },
             {
                 "id": 1,
@@ -210,7 +252,9 @@ var ContentService = (function () {
                 "description": "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
                 "isFavorite": false,
                 "isLiked": false,
-                "numberOfLikes": 10
+                "numberOfLikes": 10,
+                "voteCount": 10,
+                "myVote": 0
             },
             {
                 "id": 1,
@@ -219,7 +263,9 @@ var ContentService = (function () {
                 "description": "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
                 "isFavorite": false,
                 "isLiked": false,
-                "numberOfLikes": 10
+                "numberOfLikes": 10,
+                "voteCount": 10,
+                "myVote": 0
             },
             {
                 "id": 1,
@@ -228,7 +274,9 @@ var ContentService = (function () {
                 "description": "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
                 "isFavorite": false,
                 "isLiked": false,
-                "numberOfLikes": 10
+                "numberOfLikes": 10,
+                "voteCount": 10,
+                "myVote": 0
             },
             {
                 "id": 1,
@@ -237,7 +285,9 @@ var ContentService = (function () {
                 "description": "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
                 "isFavorite": false,
                 "isLiked": false,
-                "numberOfLikes": 10
+                "numberOfLikes": 10,
+                "voteCount": 10,
+                "myVote": 0
             },
             {
                 "id": 1,
@@ -246,7 +296,9 @@ var ContentService = (function () {
                 "description": "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
                 "isFavorite": false,
                 "isLiked": false,
-                "numberOfLikes": 10
+                "numberOfLikes": 10,
+                "voteCount": 10,
+                "myVote": 0
             },
             {
                 "id": 1,
@@ -255,7 +307,9 @@ var ContentService = (function () {
                 "description": "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
                 "isFavorite": false,
                 "isLiked": false,
-                "numberOfLikes": 10
+                "numberOfLikes": 10,
+                "voteCount": 10,
+                "myVote": 0
             },
             {
                 "id": 1,
@@ -264,7 +318,9 @@ var ContentService = (function () {
                 "description": "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
                 "isFavorite": false,
                 "isLiked": false,
-                "numberOfLikes": 10
+                "numberOfLikes": 10,
+                "voteCount": 10,
+                "myVote": 0
             },
             {
                 "id": 1,
@@ -273,7 +329,9 @@ var ContentService = (function () {
                 "description": "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
                 "isFavorite": false,
                 "isLiked": false,
-                "numberOfLikes": 10
+                "numberOfLikes": 10,
+                "voteCount": 10,
+                "myVote": 0
             }];
     };
     ;

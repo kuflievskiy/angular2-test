@@ -22,6 +22,10 @@ var Content = (function () {
         console.log('onLikeChange for elementID : ' + elementID);
         console.log($event);
     };
+    Content.prototype.onVoteChange = function ($event, elementID) {
+        console.log('onVoteChange for elementID : ' + elementID);
+        console.log($event);
+    };
     Content = __decorate([
         core_1.Component({
             selector: 'content',
@@ -35,6 +39,7 @@ var Content = (function () {
                 '<div class="card-action-buttons">' +
                 '<p>Mark as favorite: <favorite [is-favorite]="item.isFavorite" (change)="onFavoriteChange($event,item.id)"></favorite></p>' +
                 '<p>Like: <like [number-of-likes]="item.numberOfLikes" [is-liked]="item.isLiked" (change)="onLikeChange($event,item.id)"></like></p>' +
+                '<p>Vote : <vote [vote-count]="item.voteCount" [my-vote]="item.myVote" (vote)="onVoteChange($event,item.id)"></vote></p>' +
                 '</div>' +
                 '</div>' +
                 '</div>' +

@@ -13,6 +13,7 @@ import {Footer} from "./frontend/footer";
 import {Content} from './frontend/content/content';
 import {Favorite} from "./frontend/content/favorite";
 import {Like} from "./frontend/content/like";
+import {Vote} from "./frontend/content/vote";
 
 import {ContentService} from './frontend/content/content.service';
 
@@ -21,6 +22,7 @@ import { routing, appRoutingProviders } from './app.routing';
 
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import {FormsModule} from "@angular/forms";
+
 
 
 // enableProdMode();
@@ -42,6 +44,7 @@ import {FormsModule} from "@angular/forms";
         , Content
         , Favorite
         , Like
+        , Vote
 
         , AutoGrowDirective
     ],
