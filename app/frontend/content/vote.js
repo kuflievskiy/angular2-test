@@ -21,22 +21,30 @@ var Vote = (function () {
             if (this.myVote <= 0) {
                 this.myVote = 1;
                 isStateChanged = true;
+                this.isVoteUpArrowActive = true;
+                this.isVoteDownArrowActive = false;
             }
-            this.isVoteUpArrowActive = true;
-            this.isVoteUpArrowActive = false;
         }
         else if ('down' == direction) {
             if (this.myVote >= 0) {
                 this.myVote = -1;
                 isStateChanged = true;
+                this.isVoteUpArrowActive = false;
+                this.isVoteDownArrowActive = true;
             }
-            this.isVoteUpArrowActive = false;
-            this.isVoteUpArrowActive = true;
         }
         if (isStateChanged) {
             this.voteCount += this.myVote;
         }
         this.vote.emit({ 'myVote': this.myVote });
+    };
+    Vote.prototype.ngOnInit = function () {
+        if (this.myVote > 0) {
+            this.isVoteUpArrowActive = true;
+        }
+        else if (this.myVote < 0) {
+            this.isVoteDownArrowActive = true;
+        }
     };
     __decorate([
         core_1.Input('vote-count'), 
@@ -55,7 +63,7 @@ var Vote = (function () {
             selector: 'vote',
             template: "\n        <span class=\"vote-up\" [class.active]=\"isVoteUpArrowActive\" (click)=\"onClick($event,'up')\">\u2B9D</span>\n        <span class=\"votes-count\">{{voteCount}}</span>\n        <span class=\"vote-down\" [class.active]=\"isVoteDownArrowActive\" (click)=\"onClick($event,'down')\">\u2B9F</span>\n        ",
             styles: [
-                "\n            .vote-up,.vote-down{\n                cursor:pointer;\n            }\n            .vote-up.active,.vote-down.active{\n                font-weight: bold;\n            }\n        "
+                "\n            .vote-up,.vote-down{\n                cursor:pointer;\n            }\n            .vote-up.active,.vote-down.active{\n                color:#000;\n            }\n        "
             ]
         }), 
         __metadata('design:paramtypes', [])

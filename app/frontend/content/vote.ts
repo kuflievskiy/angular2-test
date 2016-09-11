@@ -1,4 +1,4 @@
-import {Component, Input, Output, EventEmitter } from '@angular/core';
+import {Component, Input, Output, EventEmitter, OnInit} from '@angular/core';
 
 @Component({
     selector: 'vote',
@@ -13,12 +13,12 @@ import {Component, Input, Output, EventEmitter } from '@angular/core';
                 cursor:pointer;
             }
             .vote-up.active,.vote-down.active{
-                font-weight: bold;
+                color:#000;
             }
         `
     ]
 })
-export class Vote {
+export class Vote implements OnInit{
     @Input('vote-count') private voteCount: number;
     @Input('my-vote') private myVote: number;
 
@@ -28,6 +28,7 @@ export class Vote {
     isVoteDownArrowActive : boolean = false;
 
     constructor() {
+
     }
 
     onClick($event,direction){
@@ -38,19 +39,20 @@ export class Vote {
             if( this.myVote <= 0 ) {
                 this.myVote = 1;
                 isStateChanged = true;
+
+                this.isVoteUpArrowActive = true;
+                this.isVoteDownArrowActive = false;
             }
 
-
-            this.isVoteUpArrowActive = true;
-            this.isVoteUpArrowActive = false;
         }else if( 'down' == direction ) {
             if( this.myVote >= 0 ) {
                 this.myVote = -1;
                 isStateChanged = true;
-            }
 
-            this.isVoteUpArrowActive = false;
-            this.isVoteUpArrowActive = true;
+
+                this.isVoteUpArrowActive = false;
+                this.isVoteDownArrowActive = true;
+            }
         }
 
         if(isStateChanged){
@@ -58,5 +60,13 @@ export class Vote {
         }
 
         this.vote.emit({ 'myVote' : this.myVote });
+    }
+
+    ngOnInit(){
+        if( this.myVote > 0 ) {
+            this.isVoteUpArrowActive = true;
+        } else if ( this.myVote < 0 ) {
+            this.isVoteDownArrowActive = true;
+        }
     }
 }

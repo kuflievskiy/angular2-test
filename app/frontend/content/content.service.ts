@@ -13,7 +13,7 @@ export class ContentService {
                 "isLiked" : false,
                 "numberOfLikes" : 1,
                 "voteCount": 10,
-                "myVote":0
+                "myVote":1
             },
             {
                 "id":2,
@@ -35,7 +35,7 @@ export class ContentService {
                 "isLiked" : false,
                 "numberOfLikes" : 3,
                 "voteCount": 10,
-                "myVote":0
+                "myVote":-1
             },
             {
                 "id":1,

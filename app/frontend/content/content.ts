@@ -22,7 +22,7 @@ import {ContentService} from "./content.service";
     styles:[
         `
             .card-action-buttons p{
-                line-height: 0em;
+                line-height: 0.8em;
             }
         `
     ]

@@ -4,7 +4,11 @@ import {Component, ElementRef, OnInit, Input, Output, EventEmitter} from '@angul
     selector: 'favorite',
     template: '<span class="glyphicons" (click)="onClick($event)" [class.glyphicon-star-empty] = "!isFavorite" [class.glyphicon-star] = "isFavorite"></span>',
     styles : [
-        `.glyphicon-star-empty, .glyphicon-star{
+        `
+        .glyphicon-star{
+            color:#000;
+        }
+        .glyphicon-star-empty, .glyphicon-star{
             font-size:25px;
         }
         .glyphicon-star-empty:hover, .glyphicon-star:hover{

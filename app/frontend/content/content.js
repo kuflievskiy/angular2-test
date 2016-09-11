@@ -46,7 +46,7 @@ var Content = (function () {
                 '</div>' +
                 '</div>',
             styles: [
-                "\n            .card-action-buttons p{\n                line-height: 0em;\n            }\n        "
+                "\n            .card-action-buttons p{\n                line-height: 0.8em;\n            }\n        "
             ]
         }), 
         __metadata('design:paramtypes', [content_service_1.ContentService])

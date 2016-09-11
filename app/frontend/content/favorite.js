@@ -48,7 +48,7 @@ var Favorite = (function () {
             selector: 'favorite',
             template: '<span class="glyphicons" (click)="onClick($event)" [class.glyphicon-star-empty] = "!isFavorite" [class.glyphicon-star] = "isFavorite"></span>',
             styles: [
-                ".glyphicon-star-empty, .glyphicon-star{\n            font-size:25px;\n        }\n        .glyphicon-star-empty:hover, .glyphicon-star:hover{\n            cursor: hand;\n        }"
+                "\n        .glyphicon-star{\n            color:#000;\n        }\n        .glyphicon-star-empty, .glyphicon-star{\n            font-size:25px;\n        }\n        .glyphicon-star-empty:hover, .glyphicon-star:hover{\n            cursor: hand;\n        }"
             ]
         }), 
         __metadata('design:paramtypes', [core_1.ElementRef])
