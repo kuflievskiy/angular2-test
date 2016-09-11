@@ -11,7 +11,8 @@ import {ContentService} from "./content.service";
                     '<img width="355px" data-src="{{item.imageUrl}}" alt="{{item.title}}">' +
                     '<p class="card-text">{{item.description}}</p>' +
                     '<favorite [is-favorite]="item.isFavorite" (change)="onFavoriteChange($event,item.id)"></favorite>' +
-                    '<span class="glyphicons glyphicons-camera"></span>' +
+                    '&nbsp;' +
+                    '<like [number-of-likes]="item.numberOfLikes" [is-liked]="item.isLiked" (change)="onLikeChange($event,item.id)"></like>' +
                 '</div>' +
             '</div>' +
         '</div>' +
@@ -25,6 +26,10 @@ export class Content {
 
     onFavoriteChange($event,elementID){
         console.log('onFavoriteChange for elementID : ' + elementID );
+        console.log($event);
+    }
+    onLikeChange($event, elementID){
+        console.log('onLikeChange for elementID : ' + elementID );
         console.log($event);
     }
 }

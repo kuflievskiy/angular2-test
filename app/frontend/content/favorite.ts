@@ -2,10 +2,14 @@ import {Component, ElementRef, OnInit, Input, Output, EventEmitter} from '@angul
 
 @Component({
     selector: 'favorite',
-    template: '<span class="glyphicons" (click)="onClick($event)" [class.glyphicon-star-empty] = "!isFavorite" [class.glyphicon-star] = "isFavorite">123</span>',
+    template: '<span class="glyphicons" (click)="onClick($event)" [class.glyphicon-star-empty] = "!isFavorite" [class.glyphicon-star] = "isFavorite"></span>',
     styles : [
-        '.glyphicon-star-empty, .glyphicon-star{position: absolute;top: 10px;right: 20px;color: lime; font-size:25px;}' +
-        '.glyphicon-star-empty:hover, .glyphicon-star:hover{cursor: hand;}'
+        `.glyphicon-star-empty, .glyphicon-star{
+            font-size:25px;
+        }
+        .glyphicon-star-empty:hover, .glyphicon-star:hover{
+            cursor: hand;
+        }`
     ]
 
 })

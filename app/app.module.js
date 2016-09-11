@@ -17,11 +17,12 @@ var frontend_1 = require("./frontend/frontend");
 var header_1 = require('./frontend/header/header');
 var footer_1 = require("./frontend/footer");
 var content_1 = require('./frontend/content/content');
+var favorite_1 = require("./frontend/content/favorite");
+var like_1 = require("./frontend/content/like");
 var content_service_1 = require('./frontend/content/content.service');
 var app_routing_1 = require('./app.routing');
 var common_1 = require('@angular/common');
 var forms_1 = require("@angular/forms");
-var favorite_1 = require("./frontend/content/favorite");
 // enableProdMode();
 var AppModule = (function () {
     function AppModule() {
@@ -41,6 +42,7 @@ var AppModule = (function () {
                 footer_1.Footer,
                 content_1.Content,
                 favorite_1.Favorite,
+                like_1.Like,
                 auto_grow_directive_1.AutoGrowDirective
             ],
             bootstrap: [
