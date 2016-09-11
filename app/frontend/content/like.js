@@ -17,12 +17,7 @@ var Like = (function () {
     }
     Like.prototype.onClick = function ($event) {
         this.isLiked = !this.isLiked;
-        if (this.isLiked) {
-            this.numberOfLikes += 1;
-        }
-        else {
-            this.numberOfLikes -= 1;
-        }
+        this.numberOfLikes += this.isLiked ? 1 : -1;
         this.renderEl($event.target);
         this.change.emit({ 'isLiked': this.isLiked, 'numberOfLikes': this.numberOfLikes });
     };
