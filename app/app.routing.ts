@@ -2,12 +2,12 @@ import { Routes, RouterModule }   from '@angular/router';
 import {ModuleWithProviders} from "@angular/core";
 
 import { Admin } from './admin/admin';
-import {Frontend} from "./frontend/frontend";
+import { Content } from "./frontend/content/content";
 
 
 
 const appRoutes: Routes = [
-    { path: '', component: Frontend },
+    { path: '', component: Content },
     { path: 'admin', component: Admin }
 ];
 
