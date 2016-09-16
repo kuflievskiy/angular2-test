@@ -15,36 +15,21 @@ var Content = (function () {
         this.items = contentService.getItems();
     }
     Content.prototype.onFavoriteChange = function ($event, elementID) {
-        console.log('onFavoriteChange for elementID : ' + elementID);
+        console.log('onFavoriteChange for elementID :' + elementID);
         console.log($event);
     };
     Content.prototype.onLikeChange = function ($event, elementID) {
-        console.log('onLikeChange for elementID : ' + elementID);
+        console.log('onLikeChange for elementID :' + elementID);
         console.log($event);
     };
     Content.prototype.onVoteChange = function ($event, elementID) {
-        console.log('onVoteChange for elementID : ' + elementID);
+        console.log('onVoteChange for elementID :' + elementID);
         console.log($event);
     };
     Content = __decorate([
         core_1.Component({
             selector: 'content',
-            template: '' +
-                '<div class="album text-muted">' +
-                '<div class="container">' +
-                '<div class="row">' +
-                '<div *ngFor="let item of items" class="card">' +
-                '<img width="355px" data-src="{{item.imageUrl}}" alt="{{item.title}}">' +
-                '<p class="card-text">{{item.description}}</p>' +
-                '<div class="card-action-buttons">' +
-                '<p>Mark as favorite: <favorite [is-favorite]="item.isFavorite" (change)="onFavoriteChange($event,item.id)"></favorite></p>' +
-                '<p>Like: <like [number-of-likes]="item.numberOfLikes" [is-liked]="item.isLiked" (change)="onLikeChange($event,item.id)"></like></p>' +
-                '<p>Vote : <vote [vote-count]="item.voteCount" [my-vote]="item.myVote" (vote)="onVoteChange($event,item.id)"></vote></p>' +
-                '</div>' +
-                '</div>' +
-                '</div>' +
-                '</div>' +
-                '</div>',
+            template: "\n<section class=\"jumbotron text-xs-center\">\n\t<div class=\"container\">\n\t\t<h1 class=\"jumbotron-heading\">Angular 2 Test application</h1>\n\t\t<p class=\"lead text-muted\">\n\t\t\tA simple app built for learning angular2, demonstrating several core features and concepts.\n\t\t\tOriginal source on github.com : <a href=\"https://github.com/kuflievskiy/angular2-test\" target=\"_blank\" title=\"Original repository\">https://github.com/kuflievskiy/angular2-test</a>\n\t\t</p>\n\t\t<p>\n\t\t\t<a href=\"#\" class=\"btn btn-primary\">Main call to action</a>\n\t\t<a href=\"#\" class=\"btn btn-secondary\">Secondary action</a>\n\t\t</p>\n\t</div>\n</section>\n<div class=\"album text-muted\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div *ngFor=\"let item of items\" class=\"card\">\n\t\t\t\t<img width=\"355px\" data-src=\"{{item.imageUrl}}\" alt=\"{{item.title}}\">\n\t\t\t\t<p class=\"card-text\">{{item.description}}</p>\n\t\t\t\t<div class=\"card-action-buttons\">\n\t\t\t\t<p>Mark as favorite: <favorite [is-favorite]=\"item.isFavorite\" (change)=\"onFavoriteChange($event,item.id)\"></favorite></p>\n\t\t\t\t<p>Like: <like [number-of-likes]=\"item.numberOfLikes\" [is-liked]=\"item.isLiked\" (change)=\"onLikeChange($event,item.id)\"></like></p>\n\t\t\t\t<p>Vote : <vote [vote-count]=\"item.voteCount\" [my-vote]=\"item.myVote\" (vote)=\"onVoteChange($event,item.id)\"></vote></p>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>",
             styles: [
                 "\n            .card-action-buttons p{\n                line-height: 0.8em;\n            }\n        "
             ]

@@ -17,7 +17,7 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: '<!-- Routed views go here --><router-outlet></router-outlet>'
+            template: "\n    <header></header>\n        <!-- Routed views go here -->\n        <router-outlet></router-outlet>\n    <footer></footer>"
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

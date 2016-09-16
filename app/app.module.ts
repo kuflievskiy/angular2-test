@@ -2,11 +2,11 @@ import {NgModule,enableProdMode}      from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {AppComponent}   from './app.component';
 
-import {AutoGrowDirective} from "./frontend/header/directives/auto-grow.directive";
+import {AutoGrowDirective} from "./frontend/directives/auto-grow.directive";
 
 import {Admin} from "./admin/admin";
 
-import {Header} from './frontend/header/header';
+import {Header} from './frontend/header';
 
 import {Content} from './frontend/content/content';
 import {Favorite} from "./frontend/content/favorite";
@@ -21,6 +21,8 @@ import { routing, appRoutingProviders } from './app.routing';
 
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import {FormsModule} from "@angular/forms";
+import {ContentTweets} from "./frontend/content/content-tweets";
+import {ContentTweetsService} from "./frontend/content/content-tweets.service";
 
 
 // enableProdMode();
@@ -39,17 +41,20 @@ import {FormsModule} from "@angular/forms";
         , Footer
 
         , Content
+        , ContentTweets
         , Favorite
         , Like
         , Vote
 
         , AutoGrowDirective
+
     ],
     bootstrap: [
         AppComponent
     ],
     providers: [
         ContentService
+        , ContentTweetsService
         , appRoutingProviders
         ,  {provide: LocationStrategy, useClass: HashLocationStrategy}
     ]
