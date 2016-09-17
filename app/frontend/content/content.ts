@@ -35,8 +35,8 @@ import {ContentService} from "./content.service";
                 <div [ngSwitch]="viewMode">                
                     <template ngSwitchDefault [ngSwitchCase]="'list'">
                         <div class="list-group">
-                            <div *ngFor="let item of items" class="list-group-item">
-                                <h5 class="list-group-item-heading">{{item.title}}</h5>
+                            <div *ngFor="let item of items, let i = index" class="list-group-item">
+                                <h5 class="list-group-item-heading">#{{i+1}} - {{item.title}}</h5>
                                 <img width="355px" data-src="{{item.imageUrl}}" alt="{{item.title}}">
                                 <p class="list-group-item-text">{{item.description}}</p>
                                 <div class="card-action-buttons">
@@ -48,8 +48,8 @@ import {ContentService} from "./content.service";
                         </div>
                     </template>
                     <template [ngSwitchCase]="'album'">
-                        <div *ngFor="let item of items" class="card">
-                            <h5>{{item.title}}</h5>
+                        <div *ngFor="let item of items, let i = index" class="card">
+                            <h5>#{{i+1}} - {{item.title}}</h5>
                             <img width="355px" data-src="{{item.imageUrl}}" alt="{{item.title}}">
                             <p class="card-text">{{item.description}}</p>
                             <div class="card-action-buttons">
