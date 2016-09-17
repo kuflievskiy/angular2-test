@@ -20,15 +20,20 @@ import {ContentService} from "./content.service";
 <div class="album text-muted">
 	<div class="container">
 		<div class="row">
-			<div *ngFor="let item of items" class="card">
-				<img width="355px" data-src="{{item.imageUrl}}" alt="{{item.title}}">
-				<p class="card-text">{{item.description}}</p>
-				<div class="card-action-buttons">
-				<p>Mark as favorite: <favorite [is-favorite]="item.isFavorite" (change)="onFavoriteChange($event,item.id)"></favorite></p>
-				<p>Like: <like [number-of-likes]="item.numberOfLikes" [is-liked]="item.isLiked" (change)="onLikeChange($event,item.id)"></like></p>
-				<p>Vote : <vote [vote-count]="item.voteCount" [my-vote]="item.myVote" (vote)="onVoteChange($event,item.id)"></vote></p>
-				</div>
-			</div>
+            <div *ngIf="items.length == 0">
+			    <p>Sorry, there are no items in the list...</p>
+            </div>
+            <div *ngIf="items.length > 0">
+                <div *ngFor="let item of items" class="card">
+                    <img width="355px" data-src="{{item.imageUrl}}" alt="{{item.title}}">
+                    <p class="card-text">{{item.description}}</p>
+                    <div class="card-action-buttons">
+                    <p>Mark as favorite: <favorite [is-favorite]="item.isFavorite" (change)="onFavoriteChange($event,item.id)"></favorite></p>
+                    <p>Like: <like [number-of-likes]="item.numberOfLikes" [is-liked]="item.isLiked" (change)="onLikeChange($event,item.id)"></like></p>
+                    <p>Vote : <vote [vote-count]="item.voteCount" [my-vote]="item.myVote" (vote)="onVoteChange($event,item.id)"></vote></p>
+                    </div>
+                </div>
+            </div>
 		</div>
 	</div>
 </div>`,
