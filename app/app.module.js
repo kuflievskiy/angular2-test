@@ -25,6 +25,7 @@ var common_1 = require('@angular/common');
 var forms_1 = require("@angular/forms");
 var content_tweets_1 = require("./frontend/content/content-tweets");
 var content_tweets_service_1 = require("./frontend/content/content-tweets.service");
+var summary_pipe_1 = require("./frontend/pipes/summary.pipe");
 // enableProdMode();
 var AppModule = (function () {
     function AppModule() {
@@ -46,7 +47,8 @@ var AppModule = (function () {
                 favorite_1.Favorite,
                 like_1.Like,
                 vote_1.Vote,
-                auto_grow_directive_1.AutoGrowDirective
+                auto_grow_directive_1.AutoGrowDirective,
+                summary_pipe_1.SummaryPipe
             ],
             bootstrap: [
                 app_component_1.AppComponent

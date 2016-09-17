@@ -23,6 +23,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import {FormsModule} from "@angular/forms";
 import {ContentTweets} from "./frontend/content/content-tweets";
 import {ContentTweetsService} from "./frontend/content/content-tweets.service";
+import {SummaryPipe} from "./frontend/pipes/summary.pipe";
 
 
 // enableProdMode();
@@ -47,6 +48,7 @@ import {ContentTweetsService} from "./frontend/content/content-tweets.service";
         , Vote
 
         , AutoGrowDirective
+        , SummaryPipe
 
     ],
     bootstrap: [
