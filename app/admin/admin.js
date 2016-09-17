@@ -20,7 +20,7 @@ var Admin = (function () {
     Admin = __decorate([
         core_1.Component({
             selector: 'admin',
-            template: 'Welcome to the admin page!<button (click)="backToHome()">go back</button>'
+            template: "\n    <div class=\"album text-muted\">\n        <div class=\"container\">\n            <div class=\"row\">\n                <h1>Welcome to the admin page!</h1>\n                <p>\n                    <button class=\"btn btn-default\" (click)=\"backToHome()\">go back</button>                \n                </p>\n            </div>\n        </div>\n    </div>"
         }), 
         __metadata('design:paramtypes', [router_1.Router])
     ], Admin);

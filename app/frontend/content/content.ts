@@ -19,20 +19,48 @@ import {ContentService} from "./content.service";
 </section>
 <div class="album text-muted">
 	<div class="container">
-		<div class="row">
+		<div class="row">		    
+            <nav class="navbar navbar-light bg-faded">
+                View mode:
+                <ul class="nav navbar-nav">
+                    <li class="nav-item" [class.active]="viewMode == 'album'"><a class="nav-link" href="#" (click)="viewMode = 'album'">Album</a></li>                
+                    <li class="nav-item" [class.active]="viewMode == 'list'"><a class="nav-link" href="#" (click)="viewMode = 'list'">List</a></li>
+                </ul>
+            </nav>
             <div *ngIf="items.length == 0">
 			    <p>Sorry, there are no items in the list...</p>
             </div>
             <div *ngIf="items.length > 0">
-                <div *ngFor="let item of items" class="card">
-                    <img width="355px" data-src="{{item.imageUrl}}" alt="{{item.title}}">
-                    <p class="card-text">{{item.description}}</p>
-                    <div class="card-action-buttons">
-                    <p>Mark as favorite: <favorite [is-favorite]="item.isFavorite" (change)="onFavoriteChange($event,item.id)"></favorite></p>
-                    <p>Like: <like [number-of-likes]="item.numberOfLikes" [is-liked]="item.isLiked" (change)="onLikeChange($event,item.id)"></like></p>
-                    <p>Vote : <vote [vote-count]="item.voteCount" [my-vote]="item.myVote" (vote)="onVoteChange($event,item.id)"></vote></p>
-                    </div>
+            
+                <div [ngSwitch]="viewMode">                
+                    <template ngSwitchDefault [ngSwitchCase]="'list'">
+                        <div class="list-group">
+                            <div *ngFor="let item of items" class="list-group-item">
+                                <h5 class="list-group-item-heading">{{item.title}}</h5>
+                                <img width="355px" data-src="{{item.imageUrl}}" alt="{{item.title}}">
+                                <p class="list-group-item-text">{{item.description}}</p>
+                                <div class="card-action-buttons">
+                                <p>Mark as favorite: <favorite [is-favorite]="item.isFavorite" (change)="onFavoriteChange($event,item.id)"></favorite></p>
+                                <p>Like: <like [number-of-likes]="item.numberOfLikes" [is-liked]="item.isLiked" (change)="onLikeChange($event,item.id)"></like></p>
+                                <p>Vote : <vote [vote-count]="item.voteCount" [my-vote]="item.myVote" (vote)="onVoteChange($event,item.id)"></vote></p>
+                                </div>
+                            </div>                    
+                        </div>
+                    </template>
+                    <template [ngSwitchCase]="'album'">
+                        <div *ngFor="let item of items" class="card">
+                            <h5>{{item.title}}</h5>
+                            <img width="355px" data-src="{{item.imageUrl}}" alt="{{item.title}}">
+                            <p class="card-text">{{item.description}}</p>
+                            <div class="card-action-buttons">
+                            <p>Mark as favorite: <favorite [is-favorite]="item.isFavorite" (change)="onFavoriteChange($event,item.id)"></favorite></p>
+                            <p>Like: <like [number-of-likes]="item.numberOfLikes" [is-liked]="item.isLiked" (change)="onLikeChange($event,item.id)"></like></p>
+                            <p>Vote : <vote [vote-count]="item.voteCount" [my-vote]="item.myVote" (vote)="onVoteChange($event,item.id)"></vote></p>
+                            </div>
+                        </div>
+                    </template>
                 </div>
+
             </div>
 		</div>
 	</div>
@@ -47,6 +75,7 @@ import {ContentService} from "./content.service";
 })
 export class Content {
     private items:any;
+    private viewMode:string = 'album';
     constructor(contentService:ContentService) {
         this.items = contentService.getItems();
     }

@@ -3,7 +3,17 @@ import {Router} from "@angular/router";
 
 @Component({
     selector: 'admin',
-    template: 'Welcome to the admin page!<button (click)="backToHome()">go back</button>'
+    template: `
+    <div class="album text-muted">
+        <div class="container">
+            <div class="row">
+                <h1>Welcome to the admin page!</h1>
+                <p>
+                    <button class="btn btn-default" (click)="backToHome()">go back</button>                
+                </p>
+            </div>
+        </div>
+    </div>`
 })
 export class Admin {
 
