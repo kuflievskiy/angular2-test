@@ -12,9 +12,10 @@ var core_1 = require('@angular/core');
 var SummaryPipe = (function () {
     function SummaryPipe() {
     }
-    SummaryPipe.prototype.transform = function (value, args) {
+    SummaryPipe.prototype.transform = function (value, limit) {
+        var limit = limit ? limit : 150;
         if (value) {
-            return value.substring(0, 150) + '...';
+            return value.substring(0, limit) + '...';
         }
     };
     SummaryPipe = __decorate([

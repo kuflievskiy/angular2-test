@@ -38,7 +38,7 @@ import {ContentService} from "./content.service";
                             <div *ngFor="let item of items, let i = index" class="list-group-item">
                                 <h5 class="list-group-item-heading">#{{i+1}} - {{item.title}}</h5>
                                 <img width="355px" data-src="{{item.imageUrl}}" alt="{{item.title}}">
-                                <p class="list-group-item-text">{{item.description | summary}}</p>
+                                <p class="list-group-item-text">{{item.description | summary:250}}</p>
                                 <div class="card-action-buttons">
                                 <p>Mark as favorite: <favorite [is-favorite]="item.isFavorite" (change)="onFavoriteChange($event,item.id)"></favorite></p>
                                 <p>Like: <like [number-of-likes]="item.numberOfLikes" [is-liked]="item.isLiked" (change)="onLikeChange($event,item.id)"></like></p>
@@ -47,11 +47,12 @@ import {ContentService} from "./content.service";
                             </div>                    
                         </div>
                     </template>
+                    
                     <template [ngSwitchCase]="'album'">
                         <div *ngFor="let item of items, let i = index" class="card">
                             <h5>#{{i+1}} - {{item.title}}</h5>
                             <img width="355px" data-src="{{item.imageUrl}}" alt="{{item.title}}">
-                            <p class="card-text">{{item.description | summary }}</p>
+                            <p class="card-text">{{item.description | summary:150 }}</p>
                             <div class="card-action-buttons">
                             <p>Mark as favorite: <favorite [is-favorite]="item.isFavorite" (change)="onFavoriteChange($event,item.id)"></favorite></p>
                             <p>Like: <like [number-of-likes]="item.numberOfLikes" [is-liked]="item.isLiked" (change)="onLikeChange($event,item.id)"></like></p>
