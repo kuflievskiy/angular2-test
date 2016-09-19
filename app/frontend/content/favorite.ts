@@ -2,7 +2,12 @@ import {Component, ElementRef, OnInit, Input, Output, EventEmitter} from '@angul
 
 @Component({
     selector: 'favorite',
-    template: '<span class="glyphicons" (click)="onClick($event)" [class.glyphicon-star-empty] = "!isFavorite" [class.glyphicon-star] = "isFavorite"></span>',
+    template: `<span (click)="onClick($event)" 
+                    [ngClass]="{
+                        'glyphicons' : true,
+                        'glyphicon-star-empty':!isFavorite,
+                        'glyphicon-star':isFavorite
+                    }"></span>`,
     styles : [
         `
         .glyphicon-star{
