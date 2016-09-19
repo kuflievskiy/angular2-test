@@ -7,18 +7,14 @@ import {Component, ElementRef, OnInit, Input, Output, EventEmitter} from '@angul
                         'glyphicons' : true,
                         'glyphicon-star-empty':!isFavorite,
                         'glyphicon-star':isFavorite
-                    }"></span>`,
+                    }"
+                    [ngStyle]="{
+                        color:'#000',
+                        fontSize:'25px',
+                        cursor:'hand'
+                    }"
+                    ></span>`,
     styles : [
-        `
-        .glyphicon-star{
-            color:#000;
-        }
-        .glyphicon-star-empty, .glyphicon-star{
-            font-size:25px;
-        }
-        .glyphicon-star-empty:hover, .glyphicon-star:hover{
-            cursor: hand;
-        }`
     ]
 })
 export class Favorite implements OnInit{

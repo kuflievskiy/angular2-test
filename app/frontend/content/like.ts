@@ -2,37 +2,38 @@ import {Component, Input, Output, EventEmitter, OnInit, ElementRef} from '@angul
 
 @Component({
     selector: 'like',
-    template: '<span class="glyphicons glyphicon-heart" (click)="onClick($event)" [class.active]="isLiked"></span>{{numberOfLikes}}',
-    styles : [
-        `
-        .glyphicon-heart{ color:#ccc; }
-        .glyphicon-heart.active{ color:deeppink; }
-        .glyphicon-heart:hover{
-            cursor:pointer;
-        }
-        `
-    ]
-
+    template: `<span (click)="onClick($event)" 
+                    [ngClass]="{
+                        'active':isLiked,
+                        'glyphicons':true,
+                        'glyphicon-heart':true
+                    }"
+                    [ngStyle]="{
+                        'color':isLiked ? 'deeppink':'#ccc',
+                        'cursor':'pointer'
+                    }"
+                    >
+                    </span>{{numberOfLikes}}`
 })
 export class Like implements OnInit {
     @Input('is-liked') private isLiked: boolean = false;
     @Input('number-of-likes') private numberOfLikes: number;
     @Output('change') private change = new EventEmitter();
 
-    constructor(private elementRef:ElementRef) {
+    constructor(private elementRef: ElementRef) {
     }
 
-    onClick($event){
-        this.isLiked = ! this.isLiked;
+    onClick($event) {
+        this.isLiked = !this.isLiked;
         this.numberOfLikes += this.isLiked ? 1 : -1;
         this.renderEl($event.target);
-        this.change.emit({ 'isLiked' : this.isLiked, 'numberOfLikes' : this.numberOfLikes });
+        this.change.emit({'isLiked': this.isLiked, 'numberOfLikes': this.numberOfLikes});
     }
 
-    renderEl(myElement){
-        if(this.isLiked){
+    renderEl(myElement) {
+        if (this.isLiked) {
             myElement.innerHTML = '&#9829;';
-        }else{
+        } else {
             myElement.innerHTML = '&#9825;';
         }
     }
