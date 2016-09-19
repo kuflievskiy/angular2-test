@@ -5,4 +5,3 @@ npm-debug.log
 # ignore compiled files
 app/**/*.js
 app/**/*.map
-app/**/*.js.map
