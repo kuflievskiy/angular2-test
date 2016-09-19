@@ -5,7 +5,7 @@ A simple app built with webpack for learning angular2, demonstrating several cor
 * routing (TODO)
 * forms
 * components with inputs + outputs
-* pipes (TODO)
+* pipes
 * providers
 * observables (TODO)
 * typescript  (TODO)

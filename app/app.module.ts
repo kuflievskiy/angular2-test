@@ -7,7 +7,7 @@ import {AutoGrowDirective} from "./frontend/directives/auto-grow.directive";
 import {Admin} from "./admin/admin";
 
 import {Header} from './frontend/header';
-
+import {HeaderBar} from "./frontend/header-bar";
 import {Content} from './frontend/content/content';
 import {Favorite} from "./frontend/content/favorite";
 import {Like} from "./frontend/content/like";
@@ -25,9 +25,7 @@ import {ContentTweets} from "./frontend/content/content-tweets";
 import {ContentTweetsService} from "./frontend/content/content-tweets.service";
 import {SummaryPipe} from "./frontend/pipes/summary.pipe";
 
-
 // enableProdMode();
-
 
 @NgModule({
     imports: [
@@ -39,6 +37,7 @@ import {SummaryPipe} from "./frontend/pipes/summary.pipe";
         AppComponent
         , Admin
         , Header
+        , HeaderBar
         , Footer
 
         , Content

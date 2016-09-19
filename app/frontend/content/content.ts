@@ -44,7 +44,7 @@ import {ContentService} from "./content.service";
                                 <p>Like: <like [number-of-likes]="item.numberOfLikes" [is-liked]="item.isLiked" (change)="onLikeChange($event,item.id)"></like></p>
                                 <p>Vote : <vote [vote-count]="item.voteCount" [my-vote]="item.myVote" (vote)="onVoteChange($event,item.id)"></vote></p>
                                 </div>
-                            </div>                    
+                            </div>
                         </div>
                     </template>
                     
