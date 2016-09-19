@@ -8,22 +8,25 @@ import {Admin} from "./admin/admin";
 
 import {Header} from './frontend/header';
 import {HeaderBar} from "./frontend/header-bar";
-import {Content} from './frontend/content/content';
-import {Favorite} from "./frontend/content/favorite";
-import {Like} from "./frontend/content/like";
-import {Vote} from "./frontend/content/vote";
+import {Content} from './frontend/pages/home/content';
+import {About} from "./frontend/pages/about";
+
+import {Favorite} from "./frontend/components/favorite";
+import {Like} from "./frontend/components/like";
+import {Vote} from "./frontend/components/vote";
 import {Footer} from "./frontend/footer";
 
-import {ContentService} from './frontend/content/content.service';
+import {ContentService} from './frontend/pages/home/content.service';
 
 import { routing, appRoutingProviders } from './app.routing';
 
 
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import {FormsModule} from "@angular/forms";
-import {ContentTweets} from "./frontend/content/content-tweets";
-import {ContentTweetsService} from "./frontend/content/content-tweets.service";
+import {ContentTweets} from "./frontend/pages/tweets/content-tweets";
+import {ContentTweetsService} from "./frontend/pages/tweets/content-tweets.service";
 import {SummaryPipe} from "./frontend/pipes/summary.pipe";
+
 
 // enableProdMode();
 
@@ -42,6 +45,7 @@ import {SummaryPipe} from "./frontend/pipes/summary.pipe";
 
         , Content
         , ContentTweets
+        , About
         , Favorite
         , Like
         , Vote

@@ -17,12 +17,17 @@ import {Router} from "@angular/router";
                       <li class="nav-item">
                         <a class="nav-link" routerLink="/" [class.active]="isActive('')">Home Page</a>
                       </li>
-                      <li class="nav-item">
-                        <a class="nav-link" routerLink="/admin" [class.active]="isActive('admin')">Admin Panel</a>
-                      </li>
+
                       <li class="nav-item">
                         <a class="nav-link" routerLink="/tweets" [class.active]="isActive('tweets')">Tweets</a>
                       </li> 
+                      <li class="nav-item">
+                        <a class="nav-link" routerLink="/about" [class.active]="isActive('about')">About</a>
+                      </li>                       
+                      
+                      <li class="nav-item" [ngStyle]="{'float':'right'}">
+                        <a class="nav-link" routerLink="/admin" [class.active]="isActive('admin')">Admin Panel</a>
+                      </li>
                     </ul>
                 </div>
             </div>
