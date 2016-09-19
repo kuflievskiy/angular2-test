@@ -4,7 +4,7 @@ import {ModuleWithProviders} from "@angular/core";
 import { Admin } from './admin/admin';
 import { Content } from "./frontend/pages/home/content";
 import {ContentTweets} from "./frontend/pages/tweets/content-tweets";
-import {About} from "./frontend/pages/about";
+import {About} from "./frontend/pages/about/about";
 
 
 

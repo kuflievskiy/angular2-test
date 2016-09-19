@@ -9,7 +9,9 @@ import {Admin} from "./admin/admin";
 import {Header} from './frontend/header';
 import {HeaderBar} from "./frontend/header-bar";
 import {Content} from './frontend/pages/home/content';
-import {About} from "./frontend/pages/about";
+import {About} from "./frontend/pages/about/about";
+import { QuestionsService } from './frontend/pages/about/questions.service';
+
 
 import {Favorite} from "./frontend/components/favorite";
 import {Like} from "./frontend/components/like";
@@ -26,6 +28,7 @@ import {FormsModule} from "@angular/forms";
 import {ContentTweets} from "./frontend/pages/tweets/content-tweets";
 import {ContentTweetsService} from "./frontend/pages/tweets/content-tweets.service";
 import {SummaryPipe} from "./frontend/pipes/summary.pipe";
+import {Zippy} from "./frontend/components/zippy";
 
 
 // enableProdMode();
@@ -49,6 +52,7 @@ import {SummaryPipe} from "./frontend/pipes/summary.pipe";
         , Favorite
         , Like
         , Vote
+        , Zippy
 
         , AutoGrowDirective
         , SummaryPipe
@@ -60,6 +64,8 @@ import {SummaryPipe} from "./frontend/pipes/summary.pipe";
     providers: [
         ContentService
         , ContentTweetsService
+        , QuestionsService
+
         , appRoutingProviders
         ,  {provide: LocationStrategy, useClass: HashLocationStrategy}
     ]
