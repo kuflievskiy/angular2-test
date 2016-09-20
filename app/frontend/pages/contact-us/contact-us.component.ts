@@ -10,4 +10,7 @@ export class ContactUs {
     log(model){
         console.log(model);
     }
+    onSubmit(form){
+        console.log(form);
+    }
 }

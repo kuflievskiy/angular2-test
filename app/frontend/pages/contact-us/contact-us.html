@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <h2>Contact Us</h2>
-            <form>
+            <form #form="ngForm" (ngSubmit)="onSubmit(form)">
                 <div class="form-group">
                     <label for="firstName">First Name</label>
                     <input ngModel
@@ -52,7 +52,7 @@
                     <div class="alert alert-danger"
                          *ngIf="text.touched && !text.valid">Text is required.</div>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Submit</button>
             </form>
         </div>
     </div>
