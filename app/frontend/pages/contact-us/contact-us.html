@@ -8,13 +8,19 @@
                     <input ngModel
                            name="firstName"
                             #firstName = "ngModel"
+                           (change)="log(firstName)"
                            id="firstName"
                            type="text"
                            class="form-control"
+                           minlength="3"
                            required
                     />
-                    <div class="alert alert-danger"
-                         *ngIf="firstName.touched && !firstName.valid">First name is required.</div>
+
+                    <div class="alert alert-danger" *ngIf="firstName.touched && firstName.errors">
+                        <div *ngIf="firstName.control.errors?.required">First name is required.</div>
+                        <div *ngIf="firstName.control.errors?.minlength">First name should contain at least 3 characters.</div>
+                    </div>
+
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Email address</label>
