@@ -5,6 +5,7 @@ import { Admin } from './admin/admin';
 import { Content } from "./frontend/pages/home/content";
 import {ContentTweets} from "./frontend/pages/tweets/content-tweets";
 import {About} from "./frontend/pages/about/about";
+import {ContactUs} from "./frontend/pages/contact-us/contact-us.component";
 
 
 
@@ -12,7 +13,9 @@ const appRoutes: Routes = [
     { path: '', component: Content },
     { path: 'tweets', component: ContentTweets },
     { path: 'about', component : About },
-    { path: 'admin', component: Admin }
+    { path: 'admin', component: Admin },
+    { path: 'contact-us', component : ContactUs }
+    //,{ path: '**', component: PageNotFoundComponent }
 ];
 
 export const appRoutingProviders: any[] = [

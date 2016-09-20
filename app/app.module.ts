@@ -24,11 +24,12 @@ import { routing, appRoutingProviders } from './app.routing';
 
 
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, Form} from "@angular/forms";
 import {ContentTweets} from "./frontend/pages/tweets/content-tweets";
 import {ContentTweetsService} from "./frontend/pages/tweets/content-tweets.service";
 import {SummaryPipe} from "./frontend/pipes/summary.pipe";
 import {Zippy} from "./frontend/components/zippy";
+import {ContactUs} from "./frontend/pages/contact-us/contact-us.component";
 
 
 // enableProdMode();
@@ -49,6 +50,8 @@ import {Zippy} from "./frontend/components/zippy";
         , Content
         , ContentTweets
         , About
+        , ContactUs
+
         , Favorite
         , Like
         , Vote

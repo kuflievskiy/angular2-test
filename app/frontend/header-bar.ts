@@ -24,6 +24,11 @@ import {Router} from "@angular/router";
                       <li class="nav-item">
                         <a class="nav-link" routerLink="/about" [class.active]="isActive('about')">About</a>
                       </li>                       
+                      <li class="nav-item">
+                        <a class="nav-link" routerLink="/contact-us" [class.active]="isActive('contact-us')">Contact Us</a>
+                      </li>                      
+                      
+                      
                       
                       <li class="nav-item" [ngStyle]="{'float':'right'}">
                         <a class="nav-link" routerLink="/admin" [class.active]="isActive('admin')">Admin Panel</a>
