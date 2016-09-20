@@ -46,11 +46,17 @@
                               class="form-control"
                               id="text"
                               rows="3"
+                              minlength="10"
+                              maxlength="100"
                               required
                     ></textarea>
 
-                    <div class="alert alert-danger"
-                         *ngIf="text.touched && !text.valid">Text is required.</div>
+                    <div class="alert alert-danger" *ngIf="text.touched && text.errors">
+                        <div *ngIf="text.control.errors.required">Text is required.</div>
+                        <div *ngIf="text.control.errors.minlength">Text should contain at least {{text.control.errors?.minlength.requiredLength}} characters.</div>
+                        <div *ngIf="text.control.errors.maxlength">Text should contain maximum {{text.control.errors?.maxlength.requiredLength}} characters.</div>
+                    </div>
+
                 </div>
                 <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Submit</button>
             </form>
