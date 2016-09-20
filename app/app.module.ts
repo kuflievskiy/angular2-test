@@ -30,6 +30,7 @@ import {ContentTweetsService} from "./frontend/pages/tweets/content-tweets.servi
 import {SummaryPipe} from "./frontend/pipes/summary.pipe";
 import {Zippy} from "./frontend/components/zippy";
 import {ContactUs} from "./frontend/pages/contact-us/contact-us.component";
+import {NotFound} from "./frontend/pages/not-found/not-found";
 
 
 // enableProdMode();
@@ -51,6 +52,7 @@ import {ContactUs} from "./frontend/pages/contact-us/contact-us.component";
         , ContentTweets
         , About
         , ContactUs
+        , NotFound
 
         , Favorite
         , Like

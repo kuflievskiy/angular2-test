@@ -6,16 +6,17 @@ import { Content } from "./frontend/pages/home/content";
 import {ContentTweets} from "./frontend/pages/tweets/content-tweets";
 import {About} from "./frontend/pages/about/about";
 import {ContactUs} from "./frontend/pages/contact-us/contact-us.component";
+import {NotFound} from "./frontend/pages/not-found/not-found";
 
 
 
 const appRoutes: Routes = [
-    { path: '', component: Content },
-    { path: 'tweets', component: ContentTweets },
-    { path: 'about', component : About },
-    { path: 'admin', component: Admin },
-    { path: 'contact-us', component : ContactUs }
-    //,{ path: '**', component: PageNotFoundComponent }
+    { path: '', component: Content }
+    ,{ path: 'tweets', component: ContentTweets }
+    ,{ path: 'about', component : About }
+    ,{ path: 'admin', component: Admin }
+    ,{ path: 'contact-us', component : ContactUs }
+    ,{ path: '**', component: NotFound }
 ];
 
 export const appRoutingProviders: any[] = [
