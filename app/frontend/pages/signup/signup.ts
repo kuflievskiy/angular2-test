@@ -1,5 +1,6 @@
 import {Component, OnChanges} from '@angular/core';
 import {FormGroup, FormBuilder, Validators} from "@angular/forms";
+import {CustomFormValidators}  from './custom.form.validators';
 
 @Component({
     selector: 'signup-form',
@@ -8,13 +9,15 @@ import {FormGroup, FormBuilder, Validators} from "@angular/forms";
 export class SignUpForm implements OnChanges {
 
     form: FormGroup;
-
-    //@Input()
     initialValue: any;
 
     constructor(private fb: FormBuilder) {
+        let customFormValidators = new CustomFormValidators();
         this.form = this.fb.group({
-            login: ['', Validators.required],
+            login: ['', [
+                Validators.required,
+                customFormValidators.cannotContainSpace
+            ]],
             password: ['', [
                 Validators.required
             ]],
