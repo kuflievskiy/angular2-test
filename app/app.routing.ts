@@ -7,7 +7,7 @@ import {ContentTweets} from "./frontend/pages/tweets/content-tweets";
 import {About} from "./frontend/pages/about/about";
 import {ContactUs} from "./frontend/pages/contact-us/contact-us.component";
 import {NotFound} from "./frontend/pages/not-found/not-found";
-
+import {SignUpForm} from "./frontend/pages/signup/signup";
 
 
 const appRoutes: Routes = [
@@ -16,6 +16,7 @@ const appRoutes: Routes = [
     ,{ path: 'about', component : About }
     ,{ path: 'admin', component: Admin }
     ,{ path: 'contact-us', component : ContactUs }
+    ,{ path: 'signup', component : SignUpForm }
     ,{ path: '**', component: NotFound }
 ];
 

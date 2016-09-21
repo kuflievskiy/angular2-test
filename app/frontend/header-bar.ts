@@ -17,7 +17,9 @@ import {Router} from "@angular/router";
                       <li class="nav-item">
                         <a class="nav-link" routerLink="/" [class.active]="isActive('')">Home Page</a>
                       </li>
-
+                      <li class="nav-item">
+                        <a class="nav-link" routerLink="/signup" [class.active]="isActive('signup')">SignUp</a>
+                      </li> 
                       <li class="nav-item">
                         <a class="nav-link" routerLink="/tweets" [class.active]="isActive('tweets')">Tweets</a>
                       </li> 

@@ -24,13 +24,14 @@ import { routing, appRoutingProviders } from './app.routing';
 
 
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
-import {FormsModule, Form} from "@angular/forms";
+import {FormsModule, Form, ReactiveFormsModule} from "@angular/forms";
 import {ContentTweets} from "./frontend/pages/tweets/content-tweets";
 import {ContentTweetsService} from "./frontend/pages/tweets/content-tweets.service";
 import {SummaryPipe} from "./frontend/pipes/summary.pipe";
 import {Zippy} from "./frontend/components/zippy";
 import {ContactUs} from "./frontend/pages/contact-us/contact-us.component";
 import {NotFound} from "./frontend/pages/not-found/not-found";
+import {SignUpForm} from "./frontend/pages/signup/signup";
 
 
 // enableProdMode();
@@ -40,6 +41,7 @@ import {NotFound} from "./frontend/pages/not-found/not-found";
         BrowserModule
         , routing
         , FormsModule
+        , ReactiveFormsModule
     ],
     declarations: [
         AppComponent
@@ -53,6 +55,7 @@ import {NotFound} from "./frontend/pages/not-found/not-found";
         , About
         , ContactUs
         , NotFound
+        , SignUpForm
 
         , Favorite
         , Like
