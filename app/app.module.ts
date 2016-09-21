@@ -1,4 +1,6 @@
 import {NgModule,enableProdMode}      from '@angular/core';
+import {environment} from "./environments/environment";
+
 import {BrowserModule} from '@angular/platform-browser';
 import {AppComponent}   from './app.component';
 
@@ -33,8 +35,10 @@ import {ContactUs} from "./frontend/pages/contact-us/contact-us.component";
 import {NotFound} from "./frontend/pages/not-found/not-found";
 import {SignUpForm} from "./frontend/pages/signup/signup";
 
-
-// enableProdMode();
+console.log(environment);
+if (environment.production) {
+    enableProdMode();
+}
 
 @NgModule({
     imports: [
