@@ -17,7 +17,11 @@ export class SignUpForm implements OnChanges {
             login: ['', [
                 Validators.required,
                 customFormValidators.cannotContainSpace
-            ]],
+            ],
+            [
+                customFormValidators.shouldBeUnique
+            ]
+            ],
             password: ['', [
                 Validators.required
             ]],
