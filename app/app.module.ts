@@ -34,6 +34,7 @@ import {Zippy} from "./frontend/components/zippy";
 import {ContactUs} from "./frontend/pages/contact-us/contact-us.component";
 import {NotFound} from "./frontend/pages/not-found/not-found";
 import {SignUpForm} from "./frontend/pages/signup/signup";
+import {ResetPasswordForm} from "./frontend/pages/resetpassword/resetpassword.form";
 
 console.log(environment);
 if (environment.production) {
@@ -60,6 +61,7 @@ if (environment.production) {
         , ContactUs
         , NotFound
         , SignUpForm
+        , ResetPasswordForm
 
         , Favorite
         , Like

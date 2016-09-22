@@ -1,6 +1,6 @@
 import {Component, OnChanges} from '@angular/core';
 import {FormGroup, FormBuilder, Validators} from "@angular/forms";
-import {CustomFormValidators}  from './custom.form.validators';
+import {CustomFormValidators}  from '../../components/validators/custom.form.validators';
 
 @Component({
     selector: 'signup-form',
@@ -18,24 +18,23 @@ export class SignUpForm implements OnChanges {
                 Validators.required,
                 customFormValidators.cannotContainSpace
             ],
-            [
-                customFormValidators.shouldBeUnique
-            ]
+                [
+                    customFormValidators.shouldBeUnique
+                ]
             ],
             password: ['', [
                 Validators.required
-            ]],
-            longDescription: ['']
+            ]]
         });
     }
 
 
-    isErrorVisible(field:string, error:string) {
-        return this.form.controls[field].dirty &&this.form.controls[field].errors && this.form.controls[field].errors[error];
+    isErrorVisible(field: string, error: string) {
+        return this.form.controls[field].dirty && this.form.controls[field].errors && this.form.controls[field].errors[error];
     }
 
-    showErrorCheckLoader(field:string) {
-        return this.form.controls[field].dirty &&this.form.controls[field].pending;
+    showErrorCheckLoader(field: string) {
+        return this.form.controls[field].dirty && this.form.controls[field].pending;
     }
 
     ngOnChanges(changes) {
@@ -49,8 +48,8 @@ export class SignUpForm implements OnChanges {
 
         // var result = authService.login(this.form.value);
 
-        this.form.controls.login.setErrors({
-           invalidLogin: true
+        this.form.get('login').setErrors({
+            invalidLogin: true
         });
 
         console.log(this.form);
