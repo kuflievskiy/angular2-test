@@ -46,6 +46,13 @@ export class SignUpForm implements OnChanges {
 
 
     onSubmit() {
+
+        // var result = authService.login(this.form.value);
+
+        this.form.controls.login.setErrors({
+           invalidLogin: true
+        });
+
         console.log(this.form);
     }
 }

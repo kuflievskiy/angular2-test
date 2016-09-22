@@ -18,11 +18,13 @@
 
                     </div>
 
-                    <div *ngIf="showErrorCheckLoader('login')">.... checking shouldBeUnique...</div>
+                    <div class="alert alert-info" *ngIf="showErrorCheckLoader('login')">.... checking shouldBeUnique...</div>
 
-                    <div class="field-error-message" *ngIf="isErrorVisible('login','required')">field is mandatory</div>
-                    <div class="field-error-message" *ngIf="isErrorVisible('login','cannotContainSpace')">field cannotContainSpace!</div>
-                    <div class="field-error-message" *ngIf="isErrorVisible('login','shouldBeUnique')">field shouldBeUnique!</div>
+                    <div class="alert alert-warning" *ngIf="isErrorVisible('login','required')">field is mandatory</div>
+                    <div class="alert alert-warning" *ngIf="isErrorVisible('login','cannotContainSpace')">field cannotContainSpace!</div>
+                    <div class="alert alert-warning" *ngIf="isErrorVisible('login','shouldBeUnique')">field shouldBeUnique!</div>
+
+                    <div class="alert alert-danger" *ngIf="form.controls.login.errors?.invalidLogin">Backend validation failed! Login field is invalid!</div>
 
                     <div class="form-group">
                         <label for="password">Password</label>
@@ -33,7 +35,7 @@
                                id="password"
                         >
                     </div>
-                    <div class="field-error-message" *ngIf="isErrorVisible('password','required')">field is mandatory</div>
+                    <div class="alert alert-warning" *ngIf="isErrorVisible('password','required')">field is mandatory</div>
 
                     <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Sign Up</button>
                 </form>
