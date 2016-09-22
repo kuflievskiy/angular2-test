@@ -34,6 +34,10 @@ export class SignUpForm implements OnChanges {
         return this.form.controls[field].dirty &&this.form.controls[field].errors && this.form.controls[field].errors[error];
     }
 
+    showErrorCheckLoader(field:string) {
+        return this.form.controls[field].dirty &&this.form.controls[field].pending;
+    }
+
     ngOnChanges(changes) {
         if (changes.initialValue) {
             this.form.patchValue(changes.initialValue.currentValue);

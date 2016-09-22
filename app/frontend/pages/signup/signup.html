@@ -17,6 +17,9 @@
                         />
 
                     </div>
+
+                    <div *ngIf="showErrorCheckLoader('login')">.... checking shouldBeUnique...</div>
+
                     <div class="field-error-message" *ngIf="isErrorVisible('login','required')">field is mandatory</div>
                     <div class="field-error-message" *ngIf="isErrorVisible('login','cannotContainSpace')">field cannotContainSpace!</div>
                     <div class="field-error-message" *ngIf="isErrorVisible('login','shouldBeUnique')">field shouldBeUnique!</div>
