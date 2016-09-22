@@ -30,8 +30,9 @@ export class RxExtensions implements OnInit {
     }
 
     ngOnInit() {
+
         var keyUps = Observable.fromEvent(document.getElementById("search"), 'keyup',null,null)
-            .map(e => e.target.value)
+            .map(e => (<any>e).target.value)
             .filter(text => text.length >= 3)
             .debounceTime(400)
             .distinctUntilChanged()
