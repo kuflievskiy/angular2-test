@@ -21,6 +21,10 @@ import {Router} from "@angular/router";
                         <a class="nav-link" routerLink="/signup" [class.active]="isActive('signup')">SignUp</a>
                       </li> 
                       <li class="nav-item">
+                        <a class="nav-link" routerLink="/reset-password" [class.active]="isActive('reset-password')">Reset Password</a>
+                      </li> 
+                      
+                      <li class="nav-item">
                         <a class="nav-link" routerLink="/tweets" [class.active]="isActive('tweets')">Tweets</a>
                       </li> 
                       <li class="nav-item">
@@ -29,7 +33,6 @@ import {Router} from "@angular/router";
                       <li class="nav-item">
                         <a class="nav-link" routerLink="/contact-us" [class.active]="isActive('contact-us')">Contact Us</a>
                       </li>                      
-                      
                       
                       
                       <li class="nav-item" [ngStyle]="{'float':'right'}">
