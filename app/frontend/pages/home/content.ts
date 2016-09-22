@@ -64,6 +64,8 @@ import {ContentService} from "./content.service";
 
             </div>
 		</div>
+		
+		<rx-code-here></rx-code-here>
 	</div>
 </div>`,
     styles:[

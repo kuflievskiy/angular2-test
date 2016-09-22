@@ -35,8 +35,8 @@ import {ContactUs} from "./frontend/pages/contact-us/contact-us.component";
 import {NotFound} from "./frontend/pages/not-found/not-found";
 import {SignUpForm} from "./frontend/pages/signup/signup";
 import {ResetPasswordForm} from "./frontend/pages/resetpassword/resetpassword.form";
+import {RxExtensions} from "./frontend/pages/rxjs-extensions";
 
-console.log(environment);
 if (environment.production) {
     enableProdMode();
 }
@@ -62,6 +62,7 @@ if (environment.production) {
         , NotFound
         , SignUpForm
         , ResetPasswordForm
+        , RxExtensions
 
         , Favorite
         , Like
