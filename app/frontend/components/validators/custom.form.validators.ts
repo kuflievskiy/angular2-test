@@ -75,15 +75,6 @@ export class CustomFormValidators {
         }
     }
 
-
-    shouldMatchTheField(ctrls:any, param1:string, param2:string) {
-        console.log('shouldMatchTheField');
-        console.log(ctrls);
-        console.log(param1);
-        console.log(param2);
-    }
-
-
     passwordsShouldMatch(group: FormGroup){
 
         // var newPassword = group.controls.newPassword.value;

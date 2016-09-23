@@ -34,6 +34,9 @@ export class ResetPasswordForm implements OnChanges {
             validator: customFormValidators.passwordsShouldMatch
         });
 
+        this.form.get('password').valueChanges.subscribe(x => {
+            console.log('Observable password changed' + x);
+        });
     }
 
 
@@ -52,8 +55,6 @@ export class ResetPasswordForm implements OnChanges {
     }
 
     isPasswordsMatch(){
-        console.log('isPasswordsMatch');
-        console.log(this.form.errors);
         return this.form.get('confirmNewPassword').touched && this.form.errors && this.form.errors.hasOwnProperty('passwordsShouldMatch');
     }
 
