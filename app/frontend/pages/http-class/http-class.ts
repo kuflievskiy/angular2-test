@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {HttpClassService} from "./http-class.service";
 
 //import {Observable} from 'rxjs/Observable';
@@ -20,13 +20,15 @@ import {HttpClassService} from "./http-class.service";
     ]
 })
 
-export class HttpClass {
+export class HttpClass implements OnInit {
     private httpClassService;
 
     public posts;
     constructor(httpClassService : HttpClassService){
         this.httpClassService = httpClassService;
+    }
 
+    ngOnInit(){
         var postsObservable = this.httpClassService.getPosts();
         postsObservable.subscribe(x=>{
             this.posts = x;
