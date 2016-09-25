@@ -10,6 +10,8 @@ import {HttpClassService} from "./http-class.service";
             <div class="container">
                 <div class="row">
                     <h2>HTTP class usage</h2>
+                    
+                    <div *ngIf="isLoading">Getting data from the server ... </div>
                     {{posts|json}}
                 </div>
             </div>
@@ -24,13 +26,18 @@ export class HttpClass implements OnInit {
     private httpClassService;
 
     public posts;
+
+    public isLoading = true;
     constructor(httpClassService : HttpClassService){
         this.httpClassService = httpClassService;
     }
 
     ngOnInit(){
         var postsObservable = this.httpClassService.getPosts();
-        postsObservable.subscribe(x=>{
+        postsObservable
+            .delay(2000)
+            .subscribe(x=>{
+            this.isLoading = false;
             this.posts = x;
             console.log(x);
         });
