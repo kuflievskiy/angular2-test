@@ -35,7 +35,12 @@ export class HttpClass implements OnInit {
             console.log(x);
         });
 
-        var createPostObservable = this.httpClassService.createPost({testname:'testvalue'});
+
+        var createPostObservable = this.httpClassService.createPost({
+            userId:1,
+            title:'title',
+            body:'text body'
+        });
         createPostObservable.subscribe(x=>{
             console.log('createPostObservable');
             console.log(x);
