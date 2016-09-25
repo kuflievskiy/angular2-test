@@ -1,5 +1,6 @@
 import {NgModule,enableProdMode}      from '@angular/core';
 import {environment} from "./environments/environment";
+import { HttpModule }    from '@angular/http';
 
 import {BrowserModule} from '@angular/platform-browser';
 import {AppComponent}   from './app.component';
@@ -36,6 +37,8 @@ import {NotFound} from "./frontend/pages/not-found/not-found";
 import {SignUpForm} from "./frontend/pages/signup/signup";
 import {ResetPasswordForm} from "./frontend/pages/resetpassword/resetpassword.form";
 import {RxExtensions} from "./frontend/pages/rxjs-extensions";
+import {HttpClass} from "./frontend/pages/http-class/http-class";
+import {HttpClassService} from "./frontend/pages/http-class/http-class.service";
 
 if (environment.production) {
     enableProdMode();
@@ -47,6 +50,7 @@ if (environment.production) {
         , routing
         , FormsModule
         , ReactiveFormsModule
+        , HttpModule
     ],
     declarations: [
         AppComponent
@@ -62,6 +66,7 @@ if (environment.production) {
         , NotFound
         , SignUpForm
         , ResetPasswordForm
+        , HttpClass
         , RxExtensions
 
         , Favorite
@@ -80,6 +85,7 @@ if (environment.production) {
         ContentService
         , ContentTweetsService
         , QuestionsService
+        , HttpClassService
 
         , appRoutingProviders
         ,  {provide: LocationStrategy, useClass: HashLocationStrategy}

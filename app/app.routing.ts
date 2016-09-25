@@ -9,6 +9,7 @@ import {ContactUs} from "./frontend/pages/contact-us/contact-us.component";
 import {NotFound} from "./frontend/pages/not-found/not-found";
 import {SignUpForm} from "./frontend/pages/signup/signup";
 import {ResetPasswordForm} from "./frontend/pages/resetpassword/resetpassword.form";
+import {HttpClass} from "./frontend/pages/http-class/http-class";
 
 
 const appRoutes: Routes = [
@@ -19,6 +20,7 @@ const appRoutes: Routes = [
     ,{ path: 'contact-us', component : ContactUs }
     ,{ path: 'signup', component : SignUpForm }
     ,{ path: 'reset-password', component : ResetPasswordForm }
+    ,{ path: 'http-class', component: HttpClass }
     ,{ path: '**', component: NotFound }
 ];
 
