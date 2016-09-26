@@ -39,6 +39,7 @@ import {ResetPasswordForm} from "./frontend/pages/resetpassword/resetpassword.fo
 import {RxExtensions} from "./frontend/pages/rxjs-extensions";
 import {HttpClass} from "./frontend/pages/http-class/http-class";
 import {HttpClassService} from "./frontend/pages/http-class/http-class.service";
+import {GithubService} from "./frontend/pages/http-class/github.service";
 
 if (environment.production) {
     enableProdMode();
@@ -86,6 +87,7 @@ if (environment.production) {
         , ContentTweetsService
         , QuestionsService
         , HttpClassService
+        , GithubService
 
         , appRoutingProviders
         ,  {provide: LocationStrategy, useClass: HashLocationStrategy}
