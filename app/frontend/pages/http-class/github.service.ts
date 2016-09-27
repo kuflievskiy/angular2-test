@@ -4,6 +4,9 @@ import {Http} from '@angular/http';
 import 'rxjs/add/operator/map';
 import {Observable} from "rxjs";
 
+import{GithubProfile} from './github.profile.interface';
+import{GithubFollower} from './github.follower.interface';
+
 @Injectable()
 export class GithubService {
 
@@ -16,13 +19,13 @@ export class GithubService {
     constructor(_http:Http ){
         this._http = _http;
     }
-    getUser(userName): Observable<any[]> {
+    getUser(userName): Observable<GithubProfile> {
         return this._http.get(this._baseUrl + this._usersPath.replace('%username%',userName)).map(x=>{
             return (<any>x).json();
         });
     }
 
-    getFollowers(userName): Observable<any[]>{
+    getFollowers(userName): Observable<GithubFollower[]>{
         return this._http.get(this._baseUrl + this._followersPath.replace('%username%',userName)).map(x=>{
             return (<any>x).json();
         });

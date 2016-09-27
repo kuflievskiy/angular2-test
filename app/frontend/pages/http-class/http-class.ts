@@ -14,7 +14,7 @@ import 'rxjs/add/observable/forkJoin';
                     <h2>HTTP class usage</h2>                    
                     isGithubProfileLoading : {{isGithubProfileLoading}}
                     <div *ngIf="isGithubProfileLoading">Getting data from the server(isGithubProfileLoading) ... </div>
-                    <template *ngIf="!isGithubProfileLoading">                       
+                    <div *ngIf="!isGithubProfileLoading">                       
                         <div>
                             <img width="200px" src="{{githubProfileData[0].avatar_url}}">
                         </div>
@@ -23,17 +23,18 @@ import 'rxjs/add/observable/forkJoin';
                         
                         <h4>Followers:</h4>
 						<ul>
-                            <li let followers = githubProfileData[1] *ngFor="let follower of followers, let i = index">
+                            <li *ngFor="let follower of githubProfileData[1], let i = index">
                             
                                 {{i}}
                                 
                                 {{follower|json}}
+                                <a target="_blank" href="{{follower.html_url}}">
                                 <img width="200px" src="{{follower.avatar_url}}"/>
-                                <a target="_blank" href="{{folower.url}}">{{follower.login}}</a>
+                                </a>
                             </li>
                         </ul>
                         
-                    </template>
+                    </div>
                                                             
                     <div *ngIf="isLoading">Getting data from the server ... </div>
                     {{posts|json}}
